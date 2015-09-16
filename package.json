@@ -1,0 +1,28 @@
+{
+  "name": "Yale_Thomas_Resume",
+  "description": "Yale Thomas's Resume",
+  "main": "js/app.js",
+  "dependencies": {
+    "browserify": "^6.2.0",
+    "catw": "^1.0.1",
+    "less": "~1.5.1",
+    "parse": "^1.6.0",
+    "parse-react": "^0.5.0",
+    "react": "^0.13.0"
+  },
+  "devDependencies": {
+    "babelify": "^6.0.2",
+    "watchify": "^2.1.1"
+  },
+  "scripts": {
+    "start": "npm run watch-css && npm run watch-js",
+    "watch-js": "watchify -o static/bundle.js -v -d js/app.js",
+    "watch-css": "catw -c 'lessc -' 'style/*.less' -o static/bundle.css"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "lessify"
+    ]
+  }
+}

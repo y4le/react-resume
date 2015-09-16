@@ -1,0 +1,204 @@
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+#app .flexbody {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+#app .mainbar,
+#app .sidebar {
+  margin: 20px;
+}
+#app .mainbar {
+  flex: 1 1 auto;
+  min-width: 400px;
+  max-width: 850px;
+}
+#app .mainbar .yale_name {
+  height: 70px;
+  font-size: 64px;
+  line-height: 42.666666666666664px;
+}
+#app .mainbar .profile {
+  font-size: 16px;
+  line-height: 24px;
+}
+#app .mainbar .education .section_header,
+#app .mainbar .projects .section_header,
+#app .mainbar .work .section_header {
+  padding: 25px 0 10px 0;
+}
+#app .mainbar .education .section_header hr,
+#app .mainbar .projects .section_header hr,
+#app .mainbar .work .section_header hr {
+  display: none;
+}
+#app .mainbar .education .info_box,
+#app .mainbar .projects .info_box,
+#app .mainbar .work .info_box {
+  padding: 15px;
+}
+#app .mainbar .education .info_box:nth-child(2n+1),
+#app .mainbar .projects .info_box:nth-child(2n+1),
+#app .mainbar .work .info_box:nth-child(2n+1) {
+  background-color: #ffffff;
+  border: 1px solid #f3f3f3;
+}
+#app .mainbar .education .info_box:nth-child(2n),
+#app .mainbar .projects .info_box:nth-child(2n),
+#app .mainbar .work .info_box:nth-child(2n) {
+  background-color: #f3f3f3;
+  border: 1px solid #f3f3f3;
+}
+#app .mainbar .education .info_box ul li,
+#app .mainbar .projects .info_box ul li,
+#app .mainbar .work .info_box ul li {
+  padding: 5px 0;
+}
+#app .mainbar .info_box .info_header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 21.333333333333332px;
+}
+#app .sidebar {
+  width: 240px;
+  height: 100%;
+  flex: 0 0 auto;
+}
+#app .sidebar .contact_info {
+  height: 70px;
+  font-size: 21.333333333333332px;
+  width: 240px;
+}
+#app .sidebar .contact_info a {
+  color: black;
+}
+#app .sidebar .classes {
+  margin: 25px 0;
+}
+#app .sidebar .skills .skills_table,
+#app .sidebar .classes .skills_table,
+#app .sidebar .skills .classes_table,
+#app .sidebar .classes .classes_table {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#app .sidebar .skills .skills_table .skill_row,
+#app .sidebar .classes .skills_table .skill_row,
+#app .sidebar .skills .classes_table .skill_row,
+#app .sidebar .classes .classes_table .skill_row,
+#app .sidebar .skills .skills_table .class_row,
+#app .sidebar .classes .skills_table .class_row,
+#app .sidebar .skills .classes_table .class_row,
+#app .sidebar .classes .classes_table .class_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+#app .sidebar .skills .skills_table .skill_row .class_name,
+#app .sidebar .classes .skills_table .skill_row .class_name,
+#app .sidebar .skills .classes_table .skill_row .class_name,
+#app .sidebar .classes .classes_table .skill_row .class_name,
+#app .sidebar .skills .skills_table .class_row .class_name,
+#app .sidebar .classes .skills_table .class_row .class_name,
+#app .sidebar .skills .classes_table .class_row .class_name,
+#app .sidebar .classes .classes_table .class_row .class_name {
+  font-size: 14px;
+}
+#app .sidebar .skills .skills_table .skill_row .class_info,
+#app .sidebar .classes .skills_table .skill_row .class_info,
+#app .sidebar .skills .classes_table .skill_row .class_info,
+#app .sidebar .classes .classes_table .skill_row .class_info,
+#app .sidebar .skills .skills_table .class_row .class_info,
+#app .sidebar .classes .skills_table .class_row .class_info,
+#app .sidebar .skills .classes_table .class_row .class_info,
+#app .sidebar .classes .classes_table .class_row .class_info {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+}
+#app .section_header.align_left .item_wrapper {
+  justify-content: flex-start;
+}
+#app .section_header.align_left .item_wrapper .header_item {
+  padding-right: 10px;
+}
+#app .section_header .item_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+#app .section_header .header_item {
+  display: inline-block;
+  flex-grow: 1;
+  text-align: right;
+}
+#app .section_header .styleButton {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #c0c0c0;
+  border-radius: 7px;
+  z-index: 10;
+  cursor: pointer;
+}
+#app .section_header .header_title {
+  font-size: 32px;
+  line-height: 32px;
+  flex-grow: 0;
+}
+#app .section_header hr {
+  opacity: .3;
+  color: #c0c0c0;
+}
+@media (max-width: 640px) {
+  #app {
+    width: 80%;
+    margin: 0 10%;
+  }
+  #app .flexbody {
+    flex-wrap: wrap-reverse;
+  }
+  #app .sidebar {
+    width: 90%;
+  }
+  #app .mainbar {
+    min-width: 0;
+  }
+  #app .mainbar .profile .section_header {
+    display: none;
+  }
+  #app .mainbar .yale_name {
+    font-size: 57.6px;
+  }
+}
+@media (max-width: 426.6666666666667px) {
+  #app {
+    width: 80%;
+    margin: 0 10%;
+  }
+  #app .flexbody {
+    flex-wrap: wrap-reverse;
+  }
+  #app .sidebar {
+    width: 90%;
+  }
+  #app .mainbar {
+    min-width: 0;
+  }
+  #app .mainbar .yale_name {
+    font-size: 44.8px;
+  }
+}
