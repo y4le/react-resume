@@ -19,7 +19,7 @@ body {
 #app .mainbar .yale_name {
   height: 70px;
   font-size: 64px;
-  line-height: 42.666666666666664px;
+  line-height: 42.66666667px;
 }
 #app .mainbar .profile {
   font-size: 16px;
@@ -62,7 +62,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 21.333333333333332px;
+  font-size: 21.33333333px;
 }
 #app .sidebar {
   width: 240px;
@@ -71,7 +71,7 @@ body {
 }
 #app .sidebar .contact_info {
   height: 70px;
-  font-size: 21.333333333333332px;
+  font-size: 21.33333333px;
   width: 240px;
 }
 #app .sidebar .contact_info a {
@@ -149,7 +149,7 @@ body {
   font-size: 14px;
   display: inline-block;
   text-align: center;
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   border-radius: 7px;
   z-index: 10;
   cursor: pointer;
@@ -161,7 +161,7 @@ body {
 }
 #app .section_header hr {
   opacity: .3;
-  color: #c0c0c0;
+  color: silver;
 }
 @media (max-width: 640px) {
   #app {
@@ -184,7 +184,7 @@ body {
     font-size: 57.6px;
   }
 }
-@media (max-width: 426.6666666666667px) {
+@media (max-width: 426.66666667px) {
   #app {
     width: 80%;
     margin: 0 10%;
