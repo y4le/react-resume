@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -17,6 +18,7 @@ body {
   max-width: 850px;
 }
 #app .mainbar .yale_name {
+  color: #08497a;
   height: 70px;
   font-size: 64px;
   line-height: 42.66666667px;
@@ -43,14 +45,14 @@ body {
 #app .mainbar .education .info_box:nth-child(2n+1),
 #app .mainbar .projects .info_box:nth-child(2n+1),
 #app .mainbar .work .info_box:nth-child(2n+1) {
-  background-color: #ffffff;
-  border: 1px solid #f3f3f3;
+  background-color: rgba(14, 122, 204, 0.2);
+  border: 1px solid rgba(14, 122, 204, 0.07);
 }
 #app .mainbar .education .info_box:nth-child(2n),
 #app .mainbar .projects .info_box:nth-child(2n),
 #app .mainbar .work .info_box:nth-child(2n) {
-  background-color: #f3f3f3;
-  border: 1px solid #f3f3f3;
+  background-color: rgba(14, 122, 204, 0.07);
+  border: 1px solid rgba(14, 122, 204, 0.07);
 }
 #app .mainbar .education .info_box ul li,
 #app .mainbar .projects .info_box ul li,
@@ -74,61 +76,194 @@ body {
   font-size: 21.33333333px;
   width: 240px;
 }
-#app .sidebar .contact_info a {
-  color: black;
-}
-#app .sidebar .classes {
-  margin: 25px 0;
+#app .sidebar .contact_info .contact_row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 #app .sidebar .skills .skills_table,
 #app .sidebar .classes .skills_table,
+#app .sidebar .books .skills_table,
 #app .sidebar .skills .classes_table,
-#app .sidebar .classes .classes_table {
+#app .sidebar .classes .classes_table,
+#app .sidebar .books .classes_table,
+#app .sidebar .skills .books_table,
+#app .sidebar .classes .books_table,
+#app .sidebar .books .books_table {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
 }
 #app .sidebar .skills .skills_table .skill_row,
 #app .sidebar .classes .skills_table .skill_row,
+#app .sidebar .books .skills_table .skill_row,
 #app .sidebar .skills .classes_table .skill_row,
 #app .sidebar .classes .classes_table .skill_row,
+#app .sidebar .books .classes_table .skill_row,
+#app .sidebar .skills .books_table .skill_row,
+#app .sidebar .classes .books_table .skill_row,
+#app .sidebar .books .books_table .skill_row,
 #app .sidebar .skills .skills_table .class_row,
 #app .sidebar .classes .skills_table .class_row,
+#app .sidebar .books .skills_table .class_row,
 #app .sidebar .skills .classes_table .class_row,
-#app .sidebar .classes .classes_table .class_row {
+#app .sidebar .classes .classes_table .class_row,
+#app .sidebar .books .classes_table .class_row,
+#app .sidebar .skills .books_table .class_row,
+#app .sidebar .classes .books_table .class_row,
+#app .sidebar .books .books_table .class_row,
+#app .sidebar .skills .skills_table .books_row,
+#app .sidebar .classes .skills_table .books_row,
+#app .sidebar .books .skills_table .books_row,
+#app .sidebar .skills .classes_table .books_row,
+#app .sidebar .classes .classes_table .books_row,
+#app .sidebar .books .classes_table .books_row,
+#app .sidebar .skills .books_table .books_row,
+#app .sidebar .classes .books_table .books_row,
+#app .sidebar .books .books_table .books_row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   font-size: 14px;
   padding-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #app .sidebar .skills .skills_table .skill_row .class_name,
 #app .sidebar .classes .skills_table .skill_row .class_name,
+#app .sidebar .books .skills_table .skill_row .class_name,
 #app .sidebar .skills .classes_table .skill_row .class_name,
 #app .sidebar .classes .classes_table .skill_row .class_name,
+#app .sidebar .books .classes_table .skill_row .class_name,
+#app .sidebar .skills .books_table .skill_row .class_name,
+#app .sidebar .classes .books_table .skill_row .class_name,
+#app .sidebar .books .books_table .skill_row .class_name,
 #app .sidebar .skills .skills_table .class_row .class_name,
 #app .sidebar .classes .skills_table .class_row .class_name,
+#app .sidebar .books .skills_table .class_row .class_name,
 #app .sidebar .skills .classes_table .class_row .class_name,
-#app .sidebar .classes .classes_table .class_row .class_name {
+#app .sidebar .classes .classes_table .class_row .class_name,
+#app .sidebar .books .classes_table .class_row .class_name,
+#app .sidebar .skills .books_table .class_row .class_name,
+#app .sidebar .classes .books_table .class_row .class_name,
+#app .sidebar .books .books_table .class_row .class_name,
+#app .sidebar .skills .skills_table .books_row .class_name,
+#app .sidebar .classes .skills_table .books_row .class_name,
+#app .sidebar .books .skills_table .books_row .class_name,
+#app .sidebar .skills .classes_table .books_row .class_name,
+#app .sidebar .classes .classes_table .books_row .class_name,
+#app .sidebar .books .classes_table .books_row .class_name,
+#app .sidebar .skills .books_table .books_row .class_name,
+#app .sidebar .classes .books_table .books_row .class_name,
+#app .sidebar .books .books_table .books_row .class_name {
   font-size: 14px;
 }
 #app .sidebar .skills .skills_table .skill_row .class_info,
 #app .sidebar .classes .skills_table .skill_row .class_info,
+#app .sidebar .books .skills_table .skill_row .class_info,
 #app .sidebar .skills .classes_table .skill_row .class_info,
 #app .sidebar .classes .classes_table .skill_row .class_info,
+#app .sidebar .books .classes_table .skill_row .class_info,
+#app .sidebar .skills .books_table .skill_row .class_info,
+#app .sidebar .classes .books_table .skill_row .class_info,
+#app .sidebar .books .books_table .skill_row .class_info,
 #app .sidebar .skills .skills_table .class_row .class_info,
 #app .sidebar .classes .skills_table .class_row .class_info,
+#app .sidebar .books .skills_table .class_row .class_info,
 #app .sidebar .skills .classes_table .class_row .class_info,
-#app .sidebar .classes .classes_table .class_row .class_info {
+#app .sidebar .classes .classes_table .class_row .class_info,
+#app .sidebar .books .classes_table .class_row .class_info,
+#app .sidebar .skills .books_table .class_row .class_info,
+#app .sidebar .classes .books_table .class_row .class_info,
+#app .sidebar .books .books_table .class_row .class_info,
+#app .sidebar .skills .skills_table .books_row .class_info,
+#app .sidebar .classes .skills_table .books_row .class_info,
+#app .sidebar .books .skills_table .books_row .class_info,
+#app .sidebar .skills .classes_table .books_row .class_info,
+#app .sidebar .classes .classes_table .books_row .class_info,
+#app .sidebar .books .classes_table .books_row .class_info,
+#app .sidebar .skills .books_table .books_row .class_info,
+#app .sidebar .classes .books_table .books_row .class_info,
+#app .sidebar .books .books_table .books_row .class_info {
   font-size: 14px;
   display: flex;
   flex-direction: row;
 }
-#app .section_header.align_left .item_wrapper {
+#app .sidebar .skills .skills_table .books_row,
+#app .sidebar .classes .skills_table .books_row,
+#app .sidebar .books .skills_table .books_row,
+#app .sidebar .skills .classes_table .books_row,
+#app .sidebar .classes .classes_table .books_row,
+#app .sidebar .books .classes_table .books_row,
+#app .sidebar .skills .books_table .books_row,
+#app .sidebar .classes .books_table .books_row,
+#app .sidebar .books .books_table .books_row {
+  font-size: 12px;
+  flex-direction: column;
+}
+#app .sidebar .skills .skills_table .books_row .book_row,
+#app .sidebar .classes .skills_table .books_row .book_row,
+#app .sidebar .books .skills_table .books_row .book_row,
+#app .sidebar .skills .classes_table .books_row .book_row,
+#app .sidebar .classes .classes_table .books_row .book_row,
+#app .sidebar .books .classes_table .books_row .book_row,
+#app .sidebar .skills .books_table .books_row .book_row,
+#app .sidebar .classes .books_table .books_row .book_row,
+#app .sidebar .books .books_table .books_row .book_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .sidebar .skills .skills_table .books_row .book_row .book_title,
+#app .sidebar .classes .skills_table .books_row .book_row .book_title,
+#app .sidebar .books .skills_table .books_row .book_row .book_title,
+#app .sidebar .skills .classes_table .books_row .book_row .book_title,
+#app .sidebar .classes .classes_table .books_row .book_row .book_title,
+#app .sidebar .books .classes_table .books_row .book_row .book_title,
+#app .sidebar .skills .books_table .books_row .book_row .book_title,
+#app .sidebar .classes .books_table .books_row .book_row .book_title,
+#app .sidebar .books .books_table .books_row .book_row .book_title {
+  font-size: 16px;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#app .sidebar .skills .skills_table .books_row .book_row .book_rating_wrapper,
+#app .sidebar .classes .skills_table .books_row .book_row .book_rating_wrapper,
+#app .sidebar .books .skills_table .books_row .book_row .book_rating_wrapper,
+#app .sidebar .skills .classes_table .books_row .book_row .book_rating_wrapper,
+#app .sidebar .classes .classes_table .books_row .book_row .book_rating_wrapper,
+#app .sidebar .books .classes_table .books_row .book_row .book_rating_wrapper,
+#app .sidebar .skills .books_table .books_row .book_row .book_rating_wrapper,
+#app .sidebar .classes .books_table .books_row .book_row .book_rating_wrapper,
+#app .sidebar .books .books_table .books_row .book_row .book_rating_wrapper {
+  width: 60px;
+  height: 10px;
+  border: 1px solid #0e7acc;
+}
+#app .sidebar .skills .skills_table .books_row .book_row .book_rating_wrapper .book_rating,
+#app .sidebar .classes .skills_table .books_row .book_row .book_rating_wrapper .book_rating,
+#app .sidebar .books .skills_table .books_row .book_row .book_rating_wrapper .book_rating,
+#app .sidebar .skills .classes_table .books_row .book_row .book_rating_wrapper .book_rating,
+#app .sidebar .classes .classes_table .books_row .book_row .book_rating_wrapper .book_rating,
+#app .sidebar .books .classes_table .books_row .book_row .book_rating_wrapper .book_rating,
+#app .sidebar .skills .books_table .books_row .book_row .book_rating_wrapper .book_rating,
+#app .sidebar .classes .books_table .books_row .book_row .book_rating_wrapper .book_rating,
+#app .sidebar .books .books_table .books_row .book_row .book_rating_wrapper .book_rating {
+  height: 10px;
+  background-color: #0e7acc;
+}
+#app .section_header {
+  padding-top: 10px;
+}
+n #app .section_header.align_left .item_wrapper {
   justify-content: flex-start;
 }
-#app .section_header.align_left .item_wrapper .header_item {
+n #app .section_header.align_left .item_wrapper .header_item {
   padding-right: 10px;
 }
 #app .section_header .item_wrapper {
@@ -149,19 +284,35 @@ body {
   font-size: 14px;
   display: inline-block;
   text-align: center;
-  border: 1px solid silver;
+  border: 1px solid #0e7acc;
   border-radius: 7px;
   z-index: 10;
   cursor: pointer;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
 }
 #app .section_header .header_title {
   font-size: 32px;
   line-height: 32px;
+  color: #08497a;
   flex-grow: 0;
 }
 #app .section_header hr {
   opacity: .3;
-  color: silver;
+  color: #0e7acc;
+}
+#app a {
+  text-decoration: none;
+  border-bottom: 2px solid #0e7acc;
+  color: #0e7acc;
+  line-height: 17px;
+  margin: 4px 0;
 }
 @media (max-width: 640px) {
   #app {

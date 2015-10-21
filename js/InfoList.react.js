@@ -19,7 +19,7 @@ var InfoList = React.createClass({
     return { order: 0 };
   },
   reorder: function() {
-    this.setState({ order: ((this.state.order + 1) % 3) });
+    this.setState({ order: ((this.state.order + 1) % this.props.orderings.length) });
   },
 
   render: function() {

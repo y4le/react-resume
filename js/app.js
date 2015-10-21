@@ -8,9 +8,10 @@ React.render(
     <div className='flexbody'>
       <div className='sidebar'>
         <div className='contact_info'>
-          <div>314 630 9258</div>
-          <a href="mailto:lordchair@gmail.com?Subject=Resume Response" target="_top">lordchair@gmail.com</a>
+          <div className='contact_row'>314 630 9258 <a href="www.linkedin.com/pub/yale-thomas/80/511/295">linkedin</a></div>
+          <div className='contact_row'><a href="mailto:lordchair@gmail.com?Subject=Resume Response" target="_top">lordchair@gmail.com</a> <a href='https://github.com/lordchair'>git</a></div>
         </div>
+        <InfoList title='Books' toJSX={content.bookToJSX} comparator={content.bookComparator} orderings={content.bookOrderings} content={content.BOOKS} />
         <InfoList title='Skills' toJSX={content.skillToJSX} comparator={content.skillComparator} orderings={content.skillOrderings} content={content.SKILLS} />
         <InfoList title='Classes' toJSX={content.classToJSX} comparator={content.classComparator} orderings={content.classOrderings} content={content.CLASSES} />
       </div>

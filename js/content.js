@@ -7,6 +7,460 @@ module.exports = Object.freeze({
     "I decided to drop out of school for many reasons, but there are two big ones. First off, I took a serious look at the job market for MatSE students and realized that the jobs I was interested in required at least a masters degree, and I was not up for that much more school. Second, I want to continue to learn to be a software engineer, and I would not have been able to take any more CS classes if I wanted to graduate on time. I didn't want to leave such a fertile learning environment, I improved my programming abilities more during my internship at Rdio than in 3 years of classes."
   ],
 
+  // Books
+  BOOKS: [
+    { 
+      title:   "The Martian",
+      author:  'Andy Weir',
+      date:    'Nov 20 2014',
+      fiction: true,
+      rating:  .95,
+      reread:  false
+    },
+    { 
+      title:   "Let's Explore Diabetes with Owls",
+      author:  'David Sedaris',
+      date:    'Nov 23 2014',
+      fiction: false,
+      rating:  .7,
+      reread:  false
+    },
+    { 
+      title:   "The Tipping Point",
+      author:  'Malcom Gladwell',
+      date:    'Nov 25 2014',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Blink",
+      author:  'Malcom Gladwell',
+      date:    'Nov 28 2014',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Outliers",
+      author:  'Malcom Gladwell',
+      date:    'Nov 30 2014',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "The Selfish Gene",
+      author:  'Richard Dawkins',
+      date:    'Dec 5 2014',
+      fiction: false,
+      rating:  .85,
+      reread:  true
+    },
+    { 
+      title:   "Hard-boiled Wonderland and the End of the World",
+      author:  'Haruki Murakami',
+      date:    'Dec 9 2014',
+      fiction: true,
+      rating:  .6,
+      reread:  false
+    },
+    { 
+      title:   "What It Is Like to Go to War",
+      author:  'Karl Marlantes',
+      date:    'Dec 14 2014',
+      fiction: false,
+      rating:  .85,
+      reread:  false
+    },
+    { 
+      title:   "The Girl With All the Gifts",
+      author:  'M. R. Carey',
+      date:    'Dec 20 2014',
+      fiction: true,
+      rating:  .65,
+      reread:  false
+    },
+    { 
+      title:   "Blindsight",
+      author:  'Peter Watts',
+      date:    'Feb 1 2015',
+      fiction: true,
+      rating:  .75,
+      reread:  false
+    },
+    { 
+      title:   "Echopraxia",
+      author:  'Peter Watts',
+      date:    'Feb 10 2015',
+      fiction: true,
+      rating:  .74,
+      reread:  false
+    },
+    { 
+      title:   "The Name of the Wind",
+      author:  'Patrick Rothfuss',
+      date:    'Feb 19 2015',
+      fiction: true,
+      rating:  .95,
+      reread:  false
+    },
+    { 
+      title:   "This Book is Full of Spiders",
+      author:  'David Wong',
+      date:    'Feb 21 2015',
+      fiction: true,
+      rating:  .7,
+      reread:  false
+    },
+    { 
+      title:   "John Dies at the End",
+      author:  'David Wong',
+      date:    'Feb 23 2015',
+      fiction: true,
+      rating:  .7,
+      reread:  true
+    },
+    { 
+      title:   "The Wise Man's Fear",
+      author:  'Patrick Rothfuss',
+      date:    'Mar 5 2015',
+      fiction: true,
+      rating:  .9,
+      reread:  false
+    },
+    { 
+      title:   "The Pillars of the Earth",
+      author:  'Ken Follet',
+      date:    'Mar 14 2015',
+      fiction: true,
+      rating:  .95,
+      reread:  false
+    },
+    { 
+      title:   "Rogues",
+      author:  'George R. R. Martin and others',
+      date:    'Mar 24 2015',
+      fiction: true,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Ringworld",
+      author:  'Larry Niven',
+      date:    'Mar 28 2015',
+      fiction: true,
+      rating:  .75,
+      reread:  true
+    },
+    { 
+      title:   "The Stand",
+      author:  'Stephen King',
+      date:    'Apr 7 2015',
+      fiction: true,
+      rating:  .79,
+      reread:  false
+    },
+    { 
+      title:   "Neuromancer",
+      author:  'William Gibson',
+      date:    'Apr 13 2015',
+      fiction: true,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Guns, Germs, and Steel",
+      author:  'Jared Diamond',
+      date:    'Apr 16 2015',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "The Martian",
+      author:  'Andy Weir',
+      date:    'Apr 22 2015',
+      fiction: true,
+      rating:  .95,
+      reread:  true
+    },
+    { 
+      title:   "It",
+      author:  'Stephen King',
+      date:    'Apr 28 2015',
+      fiction: true,
+      rating:  .795,
+      reread:  false
+    },
+    { 
+      title:   "SuperFreakonomics",
+      author:  'Stephen Dubner/Stephen Levitt',
+      date:    'May 8 2015',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Think Like a Freak",
+      author:  'Stephen Dubner/Stephen Levitt',
+      date:    'May 14 2015',
+      fiction: false,
+      rating:  .81,
+      reread:  false
+    },
+    { 
+      title:   "A Brief History of Time",
+      author:  'Stephen Hawking',
+      date:    'May 20 2015',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "When to Rob a Bank",
+      author:  'Stephen Dubner/Stephen Levitt',
+      date:    'May 26 2015',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Anathem",
+      author:  'Neal Stephenson',
+      date:    'Jun 19 2015',
+      fiction: true,
+      rating:  .775,
+      reread:  false
+    },
+    { 
+      title:   "Cryptonomicon",
+      author:  'Neal Stephenson',
+      date:    'Jul 6 2015',
+      fiction: true,
+      rating:  .785,
+      reread:  false
+    },
+    { 
+      title:   "Seveneves",
+      author:  'Neal Stephenson',
+      date:    'Jul 23 2015',
+      fiction: true,
+      rating:  .875,
+      reread:  false
+    },
+    { 
+      title:   "Snow Crash",
+      author:  'Neal Stephenson',
+      date:    'Aug 1 2015',
+      fiction: true,
+      rating:  .85,
+      reread:  false
+    },
+    { 
+      title:   "The Diamond Age",
+      author:  'Neal Stephenson',
+      date:    'Aug 9 2015',
+      fiction: true,
+      rating:  .735,
+      reread:  false
+    },
+    { 
+      title:   "What the Dog Saw",
+      author:  'Malcom Gladwell',
+      date:    'Sep 2 2015',
+      fiction: false,
+      rating:  .81,
+      reread:  false
+    },
+    { 
+      title:   "Hallucinations",
+      author:  'Oliver Sacks',
+      date:    'Sept 5 2015',
+      fiction: false,
+      rating:  .85,
+      reread:  false
+    },
+    { 
+      title:   "The Man Who Mistook His Wife for a Hat",
+      author:  'Oliver Sacks',
+      date:    'Sept 9 2015',
+      fiction: false,
+      rating:  .78,
+      reread:  false
+    },
+    { 
+      title:   "Critical Failures",
+      author:  'Robert Bevan',
+      date:    'Sept 11 2015',
+      fiction: true,
+      rating:  .75,
+      reread:  false
+    },
+    { 
+      title:   "Critical Failures II",
+      author:  'Robert Bevan',
+      date:    'Sept 12 2015',
+      fiction: true,
+      rating:  .72,
+      reread:  false
+    },
+    { 
+      title:   "The Mind's Eye",
+      author:  'Oliver Sacks',
+      date:    'Sept 15 2015',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Awakenings",
+      author:  'Oliver Sacks',
+      date:    'Sept 18 2015',
+      fiction: false,
+      rating:  .75,
+      reread:  false
+    },
+    { 
+      title:   "David and Goliath",
+      author:  'Malcom Gladwell',
+      date:    'Sep 21 2015',
+      fiction: false,
+      rating:  .85,
+      reread:  false
+    },
+    { 
+      title:   "Ready Player One",
+      author:  'Ernst Cline',
+      date:    'Sept 24 2015',
+      fiction: true,
+      rating:  .75,
+      reread:  false
+    },
+    { 
+      title:   "Flash Boys",
+      author:  'Michael Lewis',
+      date:    'Sep 26 2015',
+      fiction: false,
+      rating:  .95,
+      reread:  false
+    },
+    { 
+      title:   "The Big Short",
+      author:  'Michael Lewis',
+      date:    'Sep 28 2015',
+      fiction: false,
+      rating:  .9,
+      reread:  false
+    },
+    { 
+      title:   "Boomerang",
+      author:  'Michael Lewis',
+      date:    'Sep 30 2015',
+      fiction: false,
+      rating:  .85,
+      reread:  false
+    },
+    { 
+      title:   "Moneyball",
+      author:  'Michael Lewis',
+      date:    'Oct 3 2015',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Liar's Poker",
+      author:  'Michael Lewis',
+      date:    'Oct 5 2015',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Aurora",
+      author:  'Kim Stanley Robinson',
+      date:    'Oct 11 2015',
+      fiction: true,
+      rating:  .85,
+      reread:  false
+    },
+    { 
+      title:   "The Practicing Mind",
+      author:  'Thomas M. Sterner',
+      date:    'Oct 14 2015',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Misbehaving",
+      author:  'Richard Thaler',
+      date:    'Oct 16 2015',
+      fiction: false,
+      rating:  .8,
+      reread:  false
+    },
+    { 
+      title:   "Boomerang",
+      author:  'Michael Lewis',
+      date:    'Oct 20 2015',
+      fiction: false,
+      rating:  .85,
+      reread:  true
+    }
+  ],
+  bookOrderings: [
+    'date read',
+    'title',
+    'author',
+    'non/fiction',
+    'rating'
+  ],
+  bookToJSX: function(book) {
+    var finishDate = new Date(book.date);
+    var titleText = book.title;
+    if (book.reread) {
+      titleText += ' (reread)';
+    }
+    return (
+      <div key={finishDate.getTime()} className='books_row'>
+        <div className='book_row'>
+          <div className='book_title'>{titleText}</div>
+          <div className='book_rating_wrapper'>
+            <div className='book_rating' style={{ width: book.rating * 100 + '%' }} />
+          </div>
+        </div>
+        <div className='book_row'>
+          <div>{book.author}</div>
+          <div>{finishDate.toLocaleDateString()}</div>
+        </div>
+      </div>
+    );
+  },
+  bookComparator: function(a, b, ordering) {
+
+    switch (ordering) {
+      default: return new Date(a.date).getTime() < new Date(b.date).getTime() ? 1 : -1;
+      case 1: return a.title > b.title ? 1 : -1;
+      case 2: return a.author > b.author ? 1 : -1;
+      case 3: return a.fiction > b.fiction ? 1 : -1;
+      case 4: return a.rating < b.rating ? 1 : -1;
+    }
+
+    ordering = ordering || 0;
+    if (ordering === 0) {
+      // category sorting
+      return a.category < b.category ? 1 : -1;
+    } else if (ordering === 1) {
+      // skill sorting
+      return a.skill < b.skill ? 1 : -1;
+    } else {
+      // alph sorting
+      return a.name > b.name ? 1 : -1;
+    }
+  },
+
   // Skill related stuff
   SKILLS: [
     { name: 'Java', skill: .6, category: 'backend' },
