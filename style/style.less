@@ -6,8 +6,8 @@
 @base_color: darken(silver, 20%);
 @base_color: green;
 @base_color: @rdio_blue;
-@even_color: fade(@base_color, 7%, relative);
-@odd_color: fade(@base_color, 20%, relative);
+@even_color: fade(@base_color, 3%, relative);
+@odd_color: fade(@base_color, 12%, relative);
 @header_color: @base_color;
 @header_color: darken(@base_color, 40%);
 @header_color: darken(@base_color, 40%, relative);
@@ -163,7 +163,7 @@ body {
 
               .book_rating {
                 height: 10px;
-                background-color: @base_color;
+                background-color: @odd_color;
               }
             }
           }
@@ -200,7 +200,8 @@ body {
       font-size: @small_font;
       display: inline-block;
       text-align: center;
-      border: 1px solid @base_color;
+      // border: 1px solid @base_color;
+      background-color: @odd_color;
       border-radius: 7px;
       z-index: 10;
       cursor: pointer;
@@ -208,6 +209,25 @@ body {
       -moz-user-select: none;     /* Firefox all */
       -ms-user-select: none;      /* IE 10+ */
       user-select: none;          /* Likely future */
+    }
+    .menu_wrapper {
+      position: relative;
+
+      .options_wrapper {
+        position: absolute;
+        z-index: 1000;
+        right: 0;
+        width: 90px;
+        .option {
+          z-index: 10;
+          width: 100%;
+          background-color: fade(white, 90%);
+          cursor: pointer;
+          &:hover {
+            background-color: darken(fade(white, 90%), 20%);
+          }
+        }
+      }
     }
     .header_title {
       font-size: @large_font;

@@ -1,5 +1,5 @@
 var React = require('react');
-var StyleButton = require('./StyleButton.react.js');
+var StyleMenu = require('./StyleMenu.react.js');
 var Header = require('./Header.react.js');
 
 var InfoList = React.createClass({
@@ -21,10 +21,16 @@ var InfoList = React.createClass({
   reorder: function() {
     this.setState({ order: ((this.state.order + 1) % this.props.orderings.length) });
   },
+  setOrder: function(newOrder) {
+    if (!(newOrder > -1) || !(newOrder < this.props.orderings.length)) {
+      return;
+    }
+    this.setState({ order: newOrder });
+  },
 
   render: function() {
     var self = this;
-    var headerButton = (this.props.orderings && this.props.orderings[this.state.order]) ? (<StyleButton text={'order: ' + this.props.orderings[this.state.order]} clicked={this.reorder} />) : null;
+    var headerButton = (this.props.orderings && this.props.orderings[this.state.order]) ? (<StyleMenu text={'order: ' + this.props.orderings[this.state.order]} options={this.props.orderings}  callback={this.setOrder} />) : null;
     return (
       <div className={this.props.title.toLowerCase()}>
         <Header align='out' text={this.props.title} content={headerButton} />

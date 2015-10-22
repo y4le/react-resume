@@ -45,14 +45,14 @@ body {
 #app .mainbar .education .info_box:nth-child(2n+1),
 #app .mainbar .projects .info_box:nth-child(2n+1),
 #app .mainbar .work .info_box:nth-child(2n+1) {
-  background-color: rgba(14, 122, 204, 0.2);
-  border: 1px solid rgba(14, 122, 204, 0.07);
+  background-color: rgba(14, 122, 204, 0.12);
+  border: 1px solid rgba(14, 122, 204, 0.03);
 }
 #app .mainbar .education .info_box:nth-child(2n),
 #app .mainbar .projects .info_box:nth-child(2n),
 #app .mainbar .work .info_box:nth-child(2n) {
-  background-color: rgba(14, 122, 204, 0.07);
-  border: 1px solid rgba(14, 122, 204, 0.07);
+  background-color: rgba(14, 122, 204, 0.03);
+  border: 1px solid rgba(14, 122, 204, 0.03);
 }
 #app .mainbar .education .info_box ul li,
 #app .mainbar .projects .info_box ul li,
@@ -255,7 +255,7 @@ body {
 #app .sidebar .classes .books_table .books_row .book_row .book_rating_wrapper .book_rating,
 #app .sidebar .books .books_table .books_row .book_row .book_rating_wrapper .book_rating {
   height: 10px;
-  background-color: #0e7acc;
+  background-color: rgba(14, 122, 204, 0.12);
 }
 #app .section_header {
   padding-top: 10px;
@@ -284,7 +284,7 @@ n #app .section_header.align_left .item_wrapper .header_item {
   font-size: 14px;
   display: inline-block;
   text-align: center;
-  border: 1px solid #0e7acc;
+  background-color: rgba(14, 122, 204, 0.12);
   border-radius: 7px;
   z-index: 10;
   cursor: pointer;
@@ -296,6 +296,24 @@ n #app .section_header.align_left .item_wrapper .header_item {
   /* IE 10+ */
   user-select: none;
   /* Likely future */
+}
+#app .section_header .menu_wrapper {
+  position: relative;
+}
+#app .section_header .menu_wrapper .options_wrapper {
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  width: 90px;
+}
+#app .section_header .menu_wrapper .options_wrapper .option {
+  z-index: 10;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+#app .section_header .menu_wrapper .options_wrapper .option:hover {
+  background-color: rgba(204, 204, 204, 0.9);
 }
 #app .section_header .header_title {
   font-size: 32px;
