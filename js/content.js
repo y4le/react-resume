@@ -327,13 +327,19 @@ module.exports = Object.freeze({
       title:   "Misbehaving",
       author:  'Richard Thaler',
       date:    'Oct 16 2015',
-      fiction: false, rating:  .95, reread:  false
+      fiction: false, rating:  .95, reread: false
     },
     { 
       title:   "Boomerang",
       author:  'Michael Lewis',
       date:    'Oct 20 2015',
-      fiction: false, rating:  .9, reread:  true
+      fiction: false, rating:  .9, reread: true
+    },
+    { 
+      title:   "Thinking Fast and Slow",
+      author:  'Daniel Kahneman',
+      date:    'Oct 28 2015',
+      fiction: false, rating:  .98, reread: false
     }
   ],
   bookOrderings: [
