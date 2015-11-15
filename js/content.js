@@ -51,42 +51,49 @@ module.exports = Object.freeze({
       title:   "The Martian",
       author:  'Andy Weir',
       date:    'Nov 20 2014',
+      genre:   'SciFi',
       fiction: true, rating:  .95, reread:  false
     },
     { 
       title:   "Let's Explore Diabetes with Owls",
       author:  'David Sedaris',
       date:    'Nov 23 2014',
-      fiction: false, rating:  .7, reread:  false
+      genre:   'Comedy',
+      fiction: false, rating:  .75, reread:  false
     },
     { 
       title:   "The Tipping Point",
       author:  'Malcom Gladwell',
       date:    'Nov 25 2014',
+      genre:   'Economics',
       fiction: false, rating:  .8, reread:  false
     },
     { 
       title:   "Blink",
       author:  'Malcom Gladwell',
       date:    'Nov 28 2014',
+      genre:   'Cognitive',
       fiction: false, rating:  .8, reread:  false
     },
     { 
       title:   "Outliers",
       author:  'Malcom Gladwell',
       date:    'Nov 30 2014',
+      genre:   'Economics',
       fiction: false, rating:  .8, reread:  false
     },
     { 
       title:   "The Selfish Gene",
       author:  'Richard Dawkins',
       date:    'Dec 5 2014',
+      genre:   'Biology',
       fiction: false, rating:  .85, reread:  true
     },
     { 
       title:   "Hard-boiled Wonderland and the End of the World",
       author:  'Haruki Murakami',
       date:    'Dec 9 2014',
+      genre:   'Supernatural',
       fiction: true, rating:  .6, reread:  false
     },
     { 
@@ -99,247 +106,302 @@ module.exports = Object.freeze({
       title:   "The Girl With All the Gifts",
       author:  'M. R. Carey',
       date:    'Dec 20 2014',
+      genre:   'SciFi',
       fiction: true, rating:  .65, reread:  false
     },
     { 
       title:   "Blindsight",
       author:  'Peter Watts',
       date:    'Feb 1 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .75, reread:  false
     },
     { 
       title:   "Echopraxia",
       author:  'Peter Watts',
       date:    'Feb 10 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .74, reread:  false
     },
     { 
       title:   "The Name of the Wind",
       author:  'Patrick Rothfuss',
       date:    'Feb 19 2015',
+      genre:   'Fantasy',
       fiction: true, rating:  .93, reread:  false
     },
     { 
       title:   "This Book is Full of Spiders",
       author:  'David Wong',
       date:    'Feb 21 2015',
+      genre:   'Supernatural',
       fiction: true, rating:  .7, reread:  false
     },
     { 
       title:   "John Dies at the End",
       author:  'David Wong',
       date:    'Feb 23 2015',
+      genre:   'Supernatural',
       fiction: true, rating:  .7, reread:  true
     },
     { 
       title:   "The Wise Man's Fear",
       author:  'Patrick Rothfuss',
       date:    'Mar 5 2015',
+      genre:   'Fantasy',
       fiction: true, rating:  .9, reread:  false
     },
     { 
       title:   "The Pillars of the Earth",
       author:  'Ken Follet',
       date:    'Mar 14 2015',
+      genre:   'Historical Fiction',
       fiction: true, rating:  .94, reread:  false
     },
     { 
       title:   "Rogues",
       author:  'George R. R. Martin and others',
       date:    'Mar 24 2015',
+      genre:   'Fantasy',
       fiction: true, rating:  .8, reread:  false
     },
     { 
       title:   "Ringworld",
       author:  'Larry Niven',
       date:    'Mar 28 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .75, reread:  true
     },
     { 
       title:   "The Stand",
       author:  'Stephen King',
       date:    'Apr 7 2015',
+      genre:   'Supernatural',
       fiction: true, rating:  .79, reread:  false
     },
     { 
       title:   "Neuromancer",
       author:  'William Gibson',
       date:    'Apr 13 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .8, reread:  false
     },
     { 
       title:   "Guns, Germs, and Steel",
       author:  'Jared Diamond',
       date:    'Apr 16 2015',
+      genre:   'History',
       fiction: false, rating:  .8, reread:  false
     },
     { 
       title:   "The Martian",
       author:  'Andy Weir',
       date:    'Apr 22 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .95, reread:  true
     },
     { 
       title:   "It",
       author:  'Stephen King',
       date:    'Apr 28 2015',
+      genre:   'Supernatural',
       fiction: true, rating:  .795, reread:  false
     },
     { 
       title:   "SuperFreakonomics",
       author:  'Stephen Dubner/Stephen Levitt',
       date:    'May 8 2015',
+      genre:   'Economics',
       fiction: false, rating:  .8, reread:  false
     },
     { 
       title:   "Think Like a Freak",
       author:  'Stephen Dubner/Stephen Levitt',
       date:    'May 14 2015',
+      genre:   'Economics',
       fiction: false, rating:  .81, reread:  false
     },
     { 
       title:   "A Brief History of Time",
       author:  'Stephen Hawking',
       date:    'May 20 2015',
+      genre:   'Cosmology',
       fiction: false, rating:  .8, reread:  false
     },
     { 
       title:   "When to Rob a Bank",
       author:  'Stephen Dubner/Stephen Levitt',
       date:    'May 26 2015',
+      genre:   'Economics',
       fiction: false, rating:  .8, reread:  false
     },
     { 
       title:   "Anathem",
       author:  'Neal Stephenson',
       date:    'Jun 19 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .775, reread:  false
     },
     { 
       title:   "Cryptonomicon",
       author:  'Neal Stephenson',
       date:    'Jul 6 2015',
+      genre:   'Historical Fiction',
       fiction: true, rating:  .785, reread:  false
     },
     { 
       title:   "Seveneves",
       author:  'Neal Stephenson',
       date:    'Jul 23 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .875, reread:  false
     },
     { 
       title:   "Snow Crash",
       author:  'Neal Stephenson',
       date:    'Aug 1 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .85, reread:  false
     },
     { 
       title:   "The Diamond Age",
       author:  'Neal Stephenson',
       date:    'Aug 9 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .735, reread:  false
     },
     { 
       title:   "What the Dog Saw",
       author:  'Malcom Gladwell',
       date:    'Aug 20 2015',
+      genre:   'Various',
       fiction: false, rating:  .81, reread:  false
     },
     { 
       title:   "Hallucinations",
       author:  'Oliver Sacks',
       date:    'Aug 28 5 2015',
+      genre:   'Neuroscience',
       fiction: false, rating:  .85, reread:  false
     },
     { 
       title:   "The Man Who Mistook His Wife for a Hat",
       author:  'Oliver Sacks',
       date:    'Sept 3 2015',
+      genre:   'Neuroscience',
       fiction: false, rating:  .78, reread:  false
     },
     { 
       title:   "The Mind's Eye",
       author:  'Oliver Sacks',
       date:    'Sept 6 2015',
+      genre:   'Neuroscience',
       fiction: false, rating:  .8, reread:  false
     },
     { 
       title:   "Awakenings",
       author:  'Oliver Sacks',
       date:    'Sept 10 2015',
+      genre:   'Neuroscience',
       fiction: false, rating:  .75, reread:  false
     },
     { 
       title:   "David and Goliath",
       author:  'Malcom Gladwell',
       date:    'Sep 16 2015',
+      genre:   'Economics',
       fiction: false, rating:  .85, reread:  false
     },
     { 
       title:   "Ready Player One",
       author:  'Ernst Cline',
       date:    'Sept 22 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .7, reread:  false
     },
     { 
       title:   "Flash Boys",
       author:  'Michael Lewis',
       date:    'Sep 25 2015',
+      genre:   'Economics',
       fiction: false, rating:  .95, reread:  false
     },
     { 
       title:   "The Big Short",
       author:  'Michael Lewis',
       date:    'Sep 28 2015',
+      genre:   'Economics',
       fiction: false, rating:  .9, reread:  false
     },
     { 
       title:   "Boomerang",
       author:  'Michael Lewis',
       date:    'Sep 30 2015',
+      genre:   'Economics',
       fiction: false, rating:  .9, reread:  false
     },
     { 
       title:   "Moneyball",
       author:  'Michael Lewis',
       date:    'Oct 3 2015',
+      genre:   'Sports / Economics',
       fiction: false, rating:  .85, reread:  false
     },
     { 
       title:   "Liar's Poker",
       author:  'Michael Lewis',
       date:    'Oct 5 2015',
+      genre:   'Economics',
       fiction: false, rating:  .85, reread:  false
     },
     { 
       title:   "Aurora",
       author:  'Kim Stanley Robinson',
       date:    'Oct 11 2015',
+      genre:   'SciFi',
       fiction: true, rating:  .84, reread:  false
     },
     { 
       title:   "The Practicing Mind",
       author:  'Thomas M. Sterner',
       date:    'Oct 14 2015',
+      genre:   'Psychology',
       fiction: false, rating:  .8, reread:  false
     },
     { 
       title:   "Misbehaving",
       author:  'Richard Thaler',
       date:    'Oct 16 2015',
+      genre:   'Behavioral Economics',
       fiction: false, rating:  .95, reread: false
     },
     { 
       title:   "Boomerang",
       author:  'Michael Lewis',
       date:    'Oct 20 2015',
+      genre:   'Economics',
       fiction: false, rating:  .9, reread: true
     },
     { 
       title:   "Thinking Fast and Slow",
       author:  'Daniel Kahneman',
       date:    'Oct 28 2015',
+      genre:   'Behavioral Economics',
       fiction: false, rating:  .98, reread: false
+    },
+    { 
+      title:   "How Not to Be Wrong",
+      author:  'Jordan Ellenberg',
+      date:    'Nov 10 2015',
+      genre:   'Mathematics',
+      fiction: false, rating:  .9, reread: false
+    },
+    { 
+      title:   "Futuristic Violence and Fancy Suits",
+      author:  'David Wong',
+      date:    'Nov 15 2015',
+      genre:   'SciFi',
+      fiction: true, rating:  .89, reread: false
     }
   ],
   bookOrderings: [
