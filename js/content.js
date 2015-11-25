@@ -402,7 +402,14 @@ module.exports = Object.freeze({
       date:    'Nov 15 2015',
       genre:   'SciFi',
       fiction: true, rating:  .89, reread: false
-    }
+    },
+    {
+      title:   "The Black Swan",
+      author:  'Nassim Taleb',
+      date:    'Nov 24 2015',
+      genre:   'Epistemology / Cognitive / Economics',
+      fiction: false, rating:  .99, reread: false
+    },
   ],
   bookOrderings: [
     'date read',
