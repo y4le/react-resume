@@ -410,6 +410,20 @@ module.exports = Object.freeze({
       genre:   'Epistemology / Cognitive / Economics',
       fiction: false, rating:  .99, reread: false
     },
+    {
+      title:   "The Design of Everyday Things",
+      author:  'Donald A. Norman',
+      date:    'Nov 28 2015',
+      genre:   'Design',
+      fiction: false, rating:  .82, reread: false
+    },
+    {
+      title:   "The New New Thing",
+      author:  'Michael Lewis',
+      date:    'Dec 2 2015',
+      genre:   'Economics',
+      fiction: false, rating:  .83, reread: false
+    }
   ],
   bookOrderings: [
     'date read',
