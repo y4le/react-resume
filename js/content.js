@@ -423,6 +423,20 @@ module.exports = Object.freeze({
       date:    'Dec 2 2015',
       genre:   'Economics',
       fiction: false, rating:  .83, reread: false
+    },
+    {
+      title:   "Superintelligence: Paths, Dangers, Strategies",
+      author:  'Nick Bostrom',
+      date:    'Dec 11 2015',
+      genre:   'AI / Cognitive / Philosophy',
+      fiction: false, rating:  .935, reread: false
+    },
+    {
+      title:   "Being Mortal",
+      author:  'Atul Gawande',
+      date:    'Dec 15 2015',
+      genre:   'Medicine',
+      fiction: false, rating:  .91, reread: false
     }
   ],
   bookOrderings: [
