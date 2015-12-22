@@ -437,6 +437,13 @@ module.exports = Object.freeze({
       date:    'Dec 15 2015',
       genre:   'Medicine',
       fiction: false, rating:  .91, reread: false
+    },
+    {
+      title:   "Incognito: The Secret Lives of the Brain",
+      author:  'David Eagleman',
+      date:    'Dec 21 2015',
+      genre:   'Cognitive / Psychology',
+      fiction: false, rating:  .96, reread: false
     }
   ],
   bookOrderings: [
