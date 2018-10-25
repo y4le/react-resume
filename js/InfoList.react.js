@@ -1,34 +1,30 @@
 var React = require('react');
+var PropTypes = require('prop-types');
 var StyleMenu = require('./StyleMenu.react.js');
 var Header = require('./Header.react.js');
 
-var InfoList = React.createClass({
-  propTypes: {
-    content: React.PropTypes.array,
-    toJSX: React.PropTypes.func,
-    comparator: React.PropTypes.func,
-    title: React.PropTypes.string,
-    orderings: React.PropTypes.array
-  },
-  getDefaultProps: function() {
-    return {
-      orderings: []
-    }
-  },
-  getInitialState: function() {
-    return { order: 0 };
-  },
-  reorder: function() {
+class InfoList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      order: 0
+    };
+    this.reorder = this.reorder.bind(this);
+    this.setOrder = this.setOrder.bind(this);
+  }
+
+  reorder() {
     this.setState({ order: ((this.state.order + 1) % this.props.orderings.length) });
-  },
-  setOrder: function(newOrder) {
+  }
+
+  setOrder(newOrder) {
     if (!(newOrder > -1) || !(newOrder < this.props.orderings.length)) {
       return;
     }
     this.setState({ order: newOrder });
-  },
+  }
 
-  render: function() {
+  render() {
     var self = this;
     var headerButton = (this.props.orderings && this.props.orderings[this.state.order]) ? (<StyleMenu text={'order: ' + this.props.orderings[this.state.order]} options={this.props.orderings}  callback={this.setOrder} />) : null;
     return (
@@ -40,7 +36,18 @@ var InfoList = React.createClass({
       </div>
     );
   }
-});
+}
 
+InfoList.propTypes = {
+  content: PropTypes.array,
+  toJSX: PropTypes.func,
+  comparator: PropTypes.func,
+  title: PropTypes.string,
+  orderings: PropTypes.array
+};
+
+InfoList.defaultProps = {
+    orderings: []
+};
 
 module.exports = InfoList;

@@ -1,17 +1,19 @@
 var React = require('react');
+var PropTypes = require('prop-types');
 
-var BigButton = React.createClass({
-  propTypes: {
-    text: React.PropTypes.string,
-    clicked: React.PropTypes.func
-  },
-  render: function() {
+class BigButton extends React.Component {
+  render() {
     return (
       <div onClick={this.props.clicked} className="styleButton">
         <div>{this.props.text}</div>
       </div>
     );
   }
-});
+}
+
+BigButton.propTypes: {
+  text: PropTypes.string,
+  clicked: PropTypes.func
+};
 
 module.exports = BigButton;

@@ -1,9 +1,10 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var content = require('./content.js');
 var InfoList = require('./InfoList.react.js');
 var Header = require('./Header.react.js');
 
-React.render(
+ReactDOM.render(
   <div>
     <div className='flexbody'>
       <div className='sidebar'>
