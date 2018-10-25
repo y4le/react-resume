@@ -322,7 +322,7 @@ n #app .section_header.align_left .item_wrapper .header_item {
   flex-grow: 0;
 }
 #app .section_header hr {
-  opacity: .3;
+  opacity: 0.3;
   color: #0e7acc;
 }
 #app a {

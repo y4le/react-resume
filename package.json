@@ -3,28 +3,39 @@
   "description": "Yale Thomas's Resume",
   "main": "js/app.js",
   "dependencies": {
-    "browserify": "^6.2.0",
     "catw": "^1.0.1",
-    "dateformat": "^1.0.11",
-    "less": "latest",
-    "lessify": "^1.0.1",
-    "react": "^0.13.0",
-    "react-component-resizable": "^0.2.3",
-    "react-tappable": "^0.6.0"
+    "create-react-class": "^15.6.3",
+    "dateformat": "^3.0.3",
+    "less": "^3.8.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-component-resizable": "^2.0.1",
+    "react-dom": "^16.6.0",
+    "react-tappable": "^1.0.4"
   },
   "devDependencies": {
-    "babelify": "^6.0.2",
-    "watchify": "^2.1.1"
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "lessify": "^1.0.2",
+    "watchify": "^3.11.0"
   },
   "scripts": {
-    "start": "npm run watch-css && npm run watch-js",
-    "watch-js": "watchify -o static/bundle.js -v -d js/app.js",
+    "build": "browserify js/app.js -o static/bundle.js -v -d -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] ]",
+    "start": "yarn run watch-css & yarn run watch-js",
+    "watch-js": "watchify js/app.js -o static/bundle.js -v -d -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] ]",
     "watch-css": "catw -c 'lessc -' 'style/*.less' -o static/bundle.css"
   },
   "browserify": {
     "transform": [
-      "babelify",
+      ["babelify", { "presets": ["@babel/preset-env"] }],
       "lessify"
     ]
-  }
+  },
+  "version": "1.1.0",
+  "repository": "https://github.com/y4le/react-resume.git",
+  "author": "Yale Thomas <lordchair@gmail.com>",
+  "license": "MIT"
 }
