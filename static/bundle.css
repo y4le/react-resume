@@ -5,8 +5,39 @@ body {
 }
 #app .flexbody {
   display: flex;
+  justify-content: center;
   flex-wrap: nowrap;
   width: 100%;
+}
+#app .flexheader {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+#app .flexheader > * {
+  margin: 0 20px;
+}
+#app .name {
+  width: 100%;
+  min-width: 400px;
+  max-width: 850px;
+  flex: 1 1 400px;
+  color: #08497a;
+  height: 4rem;
+  font-size: 4rem;
+  white-space: nowrap;
+}
+#app .contact_info {
+  height: 4rem;
+  font-size: 1.33333333rem;
+  width: 15rem;
+}
+#app .contact_info .contact_row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
 }
 #app .mainbar,
 #app .sidebar {
@@ -17,15 +48,14 @@ body {
   min-width: 400px;
   max-width: 850px;
 }
-#app .mainbar .yale_name {
-  color: #08497a;
-  height: 70px;
-  font-size: 64px;
-  line-height: 42.66666667px;
-}
 #app .mainbar .profile {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+#app .mainbar .education,
+#app .mainbar .projects,
+#app .mainbar .work {
+  page-break-inside: avoid;
 }
 #app .mainbar .education .section_header,
 #app .mainbar .projects .section_header,
@@ -64,22 +94,17 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 21.33333333px;
+  font-size: 1.33333333rem;
 }
 #app .sidebar {
-  width: 240px;
+  width: 15rem;
   height: 100%;
   flex: 0 0 auto;
 }
-#app .sidebar .contact_info {
-  height: 70px;
-  font-size: 21.33333333px;
-  width: 240px;
-}
-#app .sidebar .contact_info .contact_row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+#app .sidebar .skills,
+#app .sidebar .classes,
+#app .sidebar .books {
+  page-break-inside: avoid;
 }
 #app .sidebar .skills .skills_table,
 #app .sidebar .classes .skills_table,
@@ -90,6 +115,7 @@ body {
 #app .sidebar .skills .books_table,
 #app .sidebar .classes .books_table,
 #app .sidebar .books .books_table {
+  margin-top: -10px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -125,8 +151,8 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  font-size: 14px;
-  padding-bottom: 10px;
+  font-size: 0.8rem;
+  padding-top: 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -158,7 +184,7 @@ body {
 #app .sidebar .skills .books_table .books_row .class_name,
 #app .sidebar .classes .books_table .books_row .class_name,
 #app .sidebar .books .books_table .books_row .class_name {
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 #app .sidebar .skills .skills_table .skill_row .class_info,
 #app .sidebar .classes .skills_table .skill_row .class_info,
@@ -187,7 +213,7 @@ body {
 #app .sidebar .skills .books_table .books_row .class_info,
 #app .sidebar .classes .books_table .books_row .class_info,
 #app .sidebar .books .books_table .books_row .class_info {
-  font-size: 14px;
+  font-size: 0.8rem;
   display: flex;
   flex-direction: row;
 }
@@ -278,10 +304,10 @@ n #app .section_header.align_left .item_wrapper .header_item {
   text-align: right;
 }
 #app .section_header .styleButton {
-  height: 30px;
-  line-height: 30px;
+  height: 2rem;
+  line-height: 2rem;
   padding: 0 5px;
-  font-size: 14px;
+  font-size: 0.8rem;
   display: inline-block;
   text-align: center;
   background-color: rgba(14, 122, 204, 0.12);
@@ -316,8 +342,8 @@ n #app .section_header.align_left .item_wrapper .header_item {
   background-color: rgba(204, 204, 204, 0.9);
 }
 #app .section_header .header_title {
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 2rem;
+  line-height: 2rem;
   color: #08497a;
   flex-grow: 0;
 }
@@ -329,13 +355,13 @@ n #app .section_header.align_left .item_wrapper .header_item {
   text-decoration: none;
   border-bottom: 2px solid #0e7acc;
   color: #0e7acc;
-  line-height: 17px;
+  line-height: 2rem;
   margin: 4px 0;
 }
-@media (max-width: 640px) {
+@media (max-width: 750px) {
   #app {
     width: 80%;
-    margin: 0 10%;
+    margin: 0 auto;
   }
   #app .flexbody {
     flex-wrap: wrap-reverse;
@@ -349,25 +375,56 @@ n #app .section_header.align_left .item_wrapper .header_item {
   #app .mainbar .profile .section_header {
     display: none;
   }
-  #app .mainbar .yale_name {
-    font-size: 57.6px;
+  #app .name {
+    font-size: 3.6rem;
   }
 }
-@media (max-width: 426.66666667px) {
+@media (max-width: 500px) {
+  #app .name {
+    font-size: 2.8rem;
+    white-space: normal;
+    text-align: center;
+  }
+}
+@media print {
+  html {
+    font-size: 50%;
+  }
   #app {
-    width: 80%;
-    margin: 0 10%;
-  }
-  #app .flexbody {
-    flex-wrap: wrap-reverse;
-  }
-  #app .sidebar {
     width: 90%;
   }
-  #app .mainbar {
-    min-width: 0;
+  #app .flexheader {
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
   }
-  #app .mainbar .yale_name {
-    font-size: 44.8px;
+  #app .sidebar {
+    margin-top: -20px !important;
+  }
+  #app .section_header {
+    padding-top: 10px !important;
+  }
+  #app .class_row,
+  #app .skill_row,
+  #app .book_row {
+    padding-top: 5px !important;
+  }
+  #app .class_row:nth-child(2n+1),
+  #app .skill_row:nth-child(2n+1),
+  #app .book_row:nth-child(2n+1) {
+    border-bottom: 1px solid rgba(14, 122, 204, 0.12);
+  }
+  #app .class_row:nth-child(2n),
+  #app .skill_row:nth-child(2n),
+  #app .book_row:nth-child(2n) {
+    border-bottom: 1px solid rgba(14, 122, 204, 0.12);
+  }
+  #app .info_box {
+    padding: 5px !important;
+  }
+  #app .info_box ul li {
+    padding: 2px 0 !important;
+  }
+  #app .classes {
+    display: none;
   }
 }

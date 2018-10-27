@@ -535,8 +535,6 @@ module.exports = Object.freeze({
     { name: 'Matlab', skill: .3, category: 'math' },
     { name: 'Mathematica', skill: .5, category: 'math' },
     { name: 'Photoshop', skill: .6, category: 'adobe' },
-    { name: 'Indesign', skill: .6, category: 'adobe' },
-    { name: 'Illustrator', skill: .3, category: 'adobe' }
   ],
   skillOrderings: [
     'category',
@@ -669,26 +667,14 @@ module.exports = Object.freeze({
       start_date: '2014',
       end_date: '2015',
       notes: [
-        'Dropped out of school to pursue a full time software engineering position here.',
-        'Amazing Learning Environment.',
+        'Finally learned how to really work effectively in a software development team as an intern here.',
+        'Dropped out of school to pursue a full time software engineering position.',
+        'Worked on "music feed", the current rdio.com homepage page.',
+        'Implemented a user exit survey that collects much more information than before.',
         'Pitched, created, and deployed a viewport tracker for the content on our homepage.',
         'Implemented Rdio Select subscription tier on web.',
         'Upgraded multiple admin pages with better visualizations/UX.',
         'Worked with: javascript(backbone and react), HTML, CSS, SQL, python'
-      ]
-    },
-    {
-      title: 'Rdio',
-      // title_link: 'http://www.rdio.com',
-      job_title: 'Web Team Intern',
-      end_date: '2014',
-      notes: [
-        'Finally learned how to really work effectively in a software development team.',
-        'Best front end training I have experienced. I did not know all the steps to creating and hosting a website, but now this page is an easy weekend project. (current page since rewritten in react)',
-        'Worked on "music feed", the current rdio.com homepage page.',
-        'Implemented a user exit survey that collects much more information than before.',
-        'Added analytics around the site and helped the non-technical staff to query/analyze the data.',
-        'Worked with: javascript, HTML, CSS, SQL'
       ]
     },
     {
