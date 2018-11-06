@@ -643,7 +643,7 @@ module.exports = Object.freeze({
         'Q3: Moved to data team, was tasked with implementing personalization. Built out collaborative filtering model for product recommendation.',
         'Q4: Rebuilt product deduplication pipeline from the ground up. Used neural networks to process item features into a few feature vectors, generated candidates using faiss vector similarity search, judged if candidates were actually duplicates using a random forest (couldn\'t generate good enough training data to make the NN I was playing with better)',
         'Q5: Pitched, designed, and built a human review queue for our model to get ground truth data for product deduplication. This improved the performance of the NN I had set aside before, deduplication now powered by a siamese network. Closed the training loop so the system will continue to improve with time.',
-        'Q6: Infrastructure work on data pipelines. Building features that present my personalization data to users.',
+        'Q6: Infrastructure work on data pipelines. Built service that efficiently tracks recent user-product interactions using ring buffers in redis. Got a week to work on web performance and had a big win: new user conversion rate and number of sessions per user have statistically significant increases 3 days in, paid revenue per user looking on track to get there too.',
         'Working with: rails, coffeescript, python, spark, tensorflow'
       ]
     },
@@ -729,7 +729,7 @@ module.exports = Object.freeze({
   PROJECTS: [
     {
       title: 'Text Analyzer Webapp',
-      title_link: 'http://textanalyzer.yale-thomas.com/',
+      title_link: 'http://y4le.github.io/textTrends',
       end_date: '2014',
       notes: [
         'Web app that visualizes word usage throughout long documents (think book series)',
