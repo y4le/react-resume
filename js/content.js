@@ -636,14 +636,14 @@ module.exports = Object.freeze({
       // title_link: 'http://www.tophatter.com',
       job_title: 'Full Stack Software Engineer',
       start_date: '2017',
-      end_date: 'Now',
+      end_date: '2018',
       notes: [
-        'Q1: Mostly web client work, worked on some user facing features.',
-        'Q2: Learned rails, started working full stack to build front and backend of features. Pitched, got 2 weeks to build, and demoed a react version of Tophatter. Didn\'t get support to move forward with it.',
-        'Q3: Moved to data team, was tasked with implementing personalization. Built out collaborative filtering model for product recommendation.',
-        'Q4: Rebuilt product deduplication pipeline from the ground up. Used neural networks to process item features into a few feature vectors, generated candidates using faiss vector similarity search, judged if candidates were actually duplicates using a random forest (couldn\'t generate good enough training data to make the NN I was playing with better)',
+        'Q1: Started off working on front end web. Pitched, got 2 weeks to build, and demoed a react version of Tophatter. Didn\'t get support to move forward with it.',
+        'Q2: Learned Rails and transitioned to full stack.',
+        'Q3: Moved to data team, was tasked with personalization. Pitched, architected, and implemented collaborative filtering model for product recommendation.',
+        'Q4: Worked with team of 3 to rebuild product deduplication pipeline from the ground up. Used neural networks to process item features into a few feature vectors, generated candidates using faiss vector similarity search, judged if candidates were actually duplicates using a random forest (couldn\'t generate good enough training data to make the NN I was playing with better)',
         'Q5: Pitched, designed, and built a human review queue for our model to get ground truth data for product deduplication. This improved the performance of the NN I had set aside before, deduplication now powered by a siamese network. Closed the training loop so the system will continue to improve with time.',
-        'Q6: Infrastructure work on data pipelines. Built service that efficiently tracks recent user-product interactions using ring buffers in redis. Got a week to work on web performance and had a big win: new user conversion rate and number of sessions per user have statistically significant increases 3 days in, paid revenue per user looking on track to get there too.',
+        'Q6: Infrastructure work on data pipelines. Built service that efficiently tracks recent user-product interactions using ring buffers in redis. Requested a week to work on web performance and had a big win: stat sig +6% new user conversion and +4% total revenue on web.',
         'Working with: rails, coffeescript, python, spark, tensorflow'
       ]
     },
@@ -727,6 +727,17 @@ module.exports = Object.freeze({
     }
   ],
   PROJECTS: [
+    {
+      title: 'GraphTV',
+      title_link: 'http://y4le.github.io/graphtv',
+      end_date: '2017',
+      notes: [
+        'Super bare bones site that visualizes TV shows imdb episode ratings.',
+        'Inspired by the great late http://graphtv.kevinformatics.com/',
+        'Try it out by clicking on the title above^^ Just enter a TV show name, hit enter, click on result.',
+        'Worked with: JS, HTML, CSS'
+      ]
+    },
     {
       title: 'Text Analyzer Webapp',
       title_link: 'http://y4le.github.io/textTrends',
