@@ -1,5 +1,12 @@
 var React = require('react');
 module.exports = Object.freeze({
+  name: 'Yale Thomas',
+  number: '1 (314) 630 9258',
+  email: 'lordchair@gmail.com',
+  link: 'http://y4le.github.io/react-resume/',
+  linkedin: 'http://www.linkedin.com/pub/yale-thomas/80/511/295',
+  git: 'https://github.com/y4le',
+
   TIMELINE: [
     {
       start: 'May 2017',
@@ -541,11 +548,17 @@ module.exports = Object.freeze({
     'experience',
     'alphabetic'
   ],
+  skillText: function(skillValue) {
+    if (skillValue <= .3) { return '+'; }
+    else if (skillValue <= .6) { return '++'; }
+    else { return '+++'; }
+  },
   skillToJSX: function(skill) {
-    var skillText;
-    if (skill.skill <= .3) { skillText = '+'; }
-    else if (skill.skill <= .6) { skillText = '++'; }
-    else { skillText = '+++'; }
+    const skillText = function(skillValue) {
+      if (skillValue <= .3) { return '+'; }
+      else if (skillValue <= .6) { return '++'; }
+      else { return '+++'; }
+    }(skill.skill);
     return (
       <div key={skill.name} className='skill_row'>
         <div>{skill.name}</div><div>{skillText}</div>
@@ -693,6 +706,7 @@ module.exports = Object.freeze({
       title: 'WASHU',
       job_title: 'Medical Imaging Dept. Intern',
       end_date: '2012',
+      skippable: true,
       notes: [
         'Worked with a self directed team of 3 on tool for XDS medical document transfer protocol.',
         'Built test endpoint with ability to select custom datasets that contained relevant file formats.',

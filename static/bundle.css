@@ -358,6 +358,11 @@ n #app .section_header.align_left .item_wrapper .header_item {
   line-height: 2rem;
   margin: 4px 0;
 }
+.pdf_link {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 @media (max-width: 750px) {
   #app {
     width: 80%;
