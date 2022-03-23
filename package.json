@@ -6,7 +6,8 @@
   "author": "Yale Thomas",
   "license": "MIT",
   "scripts": {
-    "pdf": "node ./src/pdf/makePdf.js"
+    "pdf": "node ./src/pdf/makePdf.js",
+    "buildProd": "npm run pdf && webpack --mode production"
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",
