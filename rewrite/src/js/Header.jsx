@@ -1,5 +1,5 @@
-var React = require('react');
-var PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Header extends React.Component {
   render() {
@@ -20,4 +20,4 @@ Header.propTypes = {
   content: PropTypes.element
 };
 
-module.exports = Header;
+export default Header;

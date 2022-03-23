@@ -1,7 +1,7 @@
-var React = require('react');
-var PropTypes = require('prop-types');
-var StyleMenu = require('./StyleMenu.jsx');
-var Header = require('./Header.jsx');
+import React from 'react';
+import PropTypes from 'prop-types';
+import StyleMenu from './StyleMenu.jsx';
+import Header from './Header.jsx';
 
 class InfoList extends React.Component {
   constructor(props) {
@@ -50,4 +50,4 @@ InfoList.defaultProps = {
     orderings: []
 };
 
-module.exports = InfoList;
+export default InfoList;

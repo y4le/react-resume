@@ -1,5 +1,6 @@
-var React = require('react');
-module.exports = Object.freeze({
+import React from 'react';
+
+export default Object.freeze({
   name: 'Yale Thomas',
   number: '1 (314) 630 9258',
   email: 'lordchair@gmail.com',

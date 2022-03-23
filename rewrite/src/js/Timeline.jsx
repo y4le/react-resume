@@ -1,8 +1,8 @@
-var React = require('react');
-var PropTypes = require('prop-types');
-var Resizable = require('react-component-resizable');
-var Tappable = require('react-tappable');
-var dateFormat = require('dateFormat');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Resizable from 'react-component-resizable';
+import Tappable from 'react-tappable';
+import dateFormat from 'dateFormat';
 
 class Timeline extends React.Component {
   constructor(props) {
@@ -258,4 +258,4 @@ Tooltip.propTypes = {
   data: PropTypes.object
 }
 
-module.exports = Timeline;
+export default Timeline;

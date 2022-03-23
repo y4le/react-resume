@@ -4,11 +4,11 @@ import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
 
 import '../style/style.less';
 
-const content = require('./content.js');
-const InfoList = require('./InfoList.jsx');
-const Header = require('./Header.jsx');
+import content from './content.js';
+import InfoList from './InfoList.jsx';
+import Header from './Header.jsx';
 
-const PdfResume = require('./PdfResume.jsx').default;
+import PdfResume from './PdfResume.jsx';
 
 
 const queryStringParams = new URLSearchParams(window.location.search);

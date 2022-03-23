@@ -1,5 +1,5 @@
-var React = require('react');
-var PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class BigButton extends React.Component {
   render() {
@@ -16,4 +16,4 @@ BigButton.propTypes: {
   clicked: PropTypes.func
 };
 
-module.exports = BigButton;
+export default BigButton;

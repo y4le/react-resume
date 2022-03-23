@@ -1,5 +1,5 @@
-var React = require('react');
-var PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class StyleMenu extends React.Component {
   constructor(props) {
@@ -53,4 +53,4 @@ StyleMenu.propTypes = {
   // callback(selected) where the argument is the index of the selected option in options[]
 };
 
-module.exports = StyleMenu;
+export default StyleMenu;
