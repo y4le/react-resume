@@ -646,6 +646,21 @@ export default Object.freeze({
   // Work / Projects / Education
   WORK: [
     {
+      title: 'Google',
+      // title_link: 'http://www.google.com',
+      job_title: 'Dialer Team Software Engineer',
+      start_date: '2019',
+      end_date: '2022',
+      notes: [
+        'Worked on improving the default android "phone" app.',
+        'First significant project was to help finish the automatic call screening feature',
+        'Worked with one other employee to prototype a new test framework that is now in use to run the same test suite as unit/emulator/device tests',
+        'Worked on the initial i18n pilot for the call screen feature (Japanese support)',
+        'Built crowdsourcing flows to collect caller ID/tagging information',
+        'Working with: java, kotlin, android'
+      ]
+    },
+    {
       title: 'Tophatter',
       // title_link: 'http://www.tophatter.com',
       job_title: 'Full Stack Software Engineer',
@@ -658,7 +673,7 @@ export default Object.freeze({
         'H4: Worked with team of 3 to rebuild product deduplication pipeline from the ground up. Used neural networks to process item features into a few feature vectors, generated candidates using faiss vector similarity search, judged if candidates were actually duplicates using a random forest (couldn\'t generate good enough training data to make the NN I was playing with better)',
         'H5: Pitched, designed, and built a human review queue for our model to get ground truth data for product deduplication. This improved the performance of the NN I had set aside before, deduplication now powered by a siamese network. Closed the training loop so the system will continue to improve with time.',
         'H6: Infrastructure work on data pipelines. Built service that efficiently tracks recent user-product interactions using ring buffers in redis. Requested a week to work on web performance and had a big win: stat sig +6% new user conversion and +4% total revenue on web.',
-        'Working with: rails, coffeescript, python, spark, tensorflow'
+        'Worked with: rails, coffeescript, python, spark, tensorflow'
       ]
     },
     {
