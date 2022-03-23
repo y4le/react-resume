@@ -4,11 +4,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/js/app.js',
+  // mode: 'production',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  devtool: 'inline-source-map',
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist')
+    }
+  },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -42,6 +48,10 @@ module.exports = {
     }),
   ],
   resolve: {
+    alias: {
+      'react': 'preact/compat',
+      'react-dom': 'preact/compat'
+    },
     fallback: {
       stream: require.resolve('stream-browserify'),
       zlib: require.resolve('browserify-zlib'),
