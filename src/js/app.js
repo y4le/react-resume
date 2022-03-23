@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import '../style/style.less';
 
 import content from './content.js';
+import pdfFile from '../pdf/resume.pdf';
+
 import InfoList from './InfoList.jsx';
 import Header from './Header.jsx';
 
@@ -31,6 +33,9 @@ const jsx = (
         <InfoList title='Education' toJSX={content.profileToJSX} comparator={content.profileComparator} content={content.EDUCATION} />
         <InfoList title='Projects' toJSX={content.profileToJSX} comparator={content.profileComparator} content={content.PROJECTS} />
       </div>
+    </div>
+    <div className='pdf_link'>
+      <a href={pdfFile} target='_blank'>Pdf Version</a>
     </div>
   </div>
 );

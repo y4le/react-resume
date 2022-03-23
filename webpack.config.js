@@ -31,8 +31,8 @@ module.exports = {
         use: ["style-loader", "css-loader", "less-loader"],
       },
       {
-        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-        use: ["file-loader"]
+        test: /\.(pdf)$/,
+        type: 'asset'
       },
     ],
   },
