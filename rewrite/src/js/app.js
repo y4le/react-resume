@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
 
+import '../style/style.less';
+
 const content = require('./content.js');
 const InfoList = require('./InfoList.jsx');
 const Header = require('./Header.jsx');
