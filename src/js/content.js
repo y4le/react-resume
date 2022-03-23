@@ -652,12 +652,12 @@ export default Object.freeze({
       start_date: '2017',
       end_date: '2018',
       notes: [
-        'Q1: Started off working on front end web. Pitched, got 2 weeks to build, and demoed a react version of Tophatter. Didn\'t get support to move forward with it.',
-        'Q2: Learned Rails and transitioned to full stack.',
-        'Q3: Moved to data team, was tasked with personalization. Pitched, architected, and implemented collaborative filtering model for product recommendation.',
-        'Q4: Worked with team of 3 to rebuild product deduplication pipeline from the ground up. Used neural networks to process item features into a few feature vectors, generated candidates using faiss vector similarity search, judged if candidates were actually duplicates using a random forest (couldn\'t generate good enough training data to make the NN I was playing with better)',
-        'Q5: Pitched, designed, and built a human review queue for our model to get ground truth data for product deduplication. This improved the performance of the NN I had set aside before, deduplication now powered by a siamese network. Closed the training loop so the system will continue to improve with time.',
-        'Q6: Infrastructure work on data pipelines. Built service that efficiently tracks recent user-product interactions using ring buffers in redis. Requested a week to work on web performance and had a big win: stat sig +6% new user conversion and +4% total revenue on web.',
+        'H1: Started off working on front end web. Pitched, got 2 weeks to build, and demoed a react version of Tophatter. Didn\'t get support to move forward with it.',
+        'H2: Learned Rails and transitioned to full stack.',
+        'H3: Moved to data team, was tasked with personalization. Pitched, architected, and implemented collaborative filtering model for product recommendation.',
+        'H4: Worked with team of 3 to rebuild product deduplication pipeline from the ground up. Used neural networks to process item features into a few feature vectors, generated candidates using faiss vector similarity search, judged if candidates were actually duplicates using a random forest (couldn\'t generate good enough training data to make the NN I was playing with better)',
+        'H5: Pitched, designed, and built a human review queue for our model to get ground truth data for product deduplication. This improved the performance of the NN I had set aside before, deduplication now powered by a siamese network. Closed the training loop so the system will continue to improve with time.',
+        'H6: Infrastructure work on data pipelines. Built service that efficiently tracks recent user-product interactions using ring buffers in redis. Requested a week to work on web performance and had a big win: stat sig +6% new user conversion and +4% total revenue on web.',
         'Working with: rails, coffeescript, python, spark, tensorflow'
       ]
     },
