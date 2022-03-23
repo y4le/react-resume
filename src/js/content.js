@@ -62,7 +62,7 @@ export default Object.freeze({
 
   // Profile stuff, array of string paragraphs
   profile: [
-    'I am a software engineer at Tophatter working on using machine learning to improve user experience. I grew up along side the field of UX, and developed a passion for improving the ergonomics of user-computer interaction. At first I approached the problem from the perspective of UI design, "The Visual Display of Quantitative Information" had quite an impact on me, and showed me how much better our programs can be at talking to humans. Recently I have been working on improving that conversation from a different direction, using machine learning to answer questions and surface information that would otherwise be too difficult to communicate. I am transhumanist at heart and believe that we are quickly moving towards a time where the boundary between user and computer will fade. I want to help us get there.'
+    'I am a software engineer at Google working on improving android\'s phone app. I grew up along side the field of UX and developed a passion for improving the ergonomics of human-computer interaction. At first I approached the problem from the perspective of UI design, "The Visual Display of Quantitative Information" had quite an impact on me, and showed me how much better our programs can be at talking to humans. Recently I have been more interested in improving that conversation from a different direction, using machine learning to answer questions and surface information that would otherwise be too difficult to communicate. I am transhumanist at heart and believe that we are quickly moving towards a time where the boundary between user and computer will fade. I want to help us get there.'
   ],
 
   // Books
