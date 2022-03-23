@@ -13,36 +13,68 @@
 @header_color: darken(@base_color, 40%, relative);
 
 
-@small_font: @base_font - 2;
-@base_font: 16px;
-@contact_font: @base_font * 4 / 3;
-@large_font: @base_font * 2;
-@super_large_font: @base_font * 4;
+@small_font: (@base_font * 4 / 5);
+@base_font: 1rem;
+@contact_font: (@base_font * 4 / 3);
+@large_font: (@base_font * 2);
+@super_large_font: (@base_font * 4);
 
 @section_spacing: 25px;
-@headbar_height: 70px;
+@headbar_height: @super_large_font;
 @mainbar_min_width: 400px;
-@sidebar_width: 235px;
 @sidebar_width: @base_font * 15;
 @min_page_width_for_full_layout: (@sidebar_width + @mainbar_min_width);
+@min_page_width_for_full_layout: 750px;
 @small_title_width: (@min_page_width_for_full_layout * 2 / 3);
 
 
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
 
 #app {
-  > * > * > * {
-    // padding: 15px;
-  }
-
   .flexbody {
     display: flex;
+    justify-content: center;
     flex-wrap: nowrap;
     width: 100%;
   }
+
+  .flexheader {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    > * {
+      margin: 0 20px;
+    }
+  }
+
+  .name {
+    width: 100%;
+    min-width: @mainbar_min_width;
+    max-width: 850px;
+    flex: 1 1 @mainbar_min_width;
+    color: @header_color;
+    height: @headbar_height;
+    font-size: @super_large_font;
+    white-space: nowrap;
+  }
+
+  .contact_info {
+    height: @headbar_height;
+    font-size: @contact_font;
+    width: @sidebar_width;
+
+    .contact_row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50%;
+    }
+  }
+
   .mainbar,.sidebar {
     margin: 20px;
   }
@@ -51,19 +83,13 @@ body {
     min-width: @mainbar_min_width;
     max-width: 850px;
 
-    .yale_name {
-      color: @header_color;
-      height: @headbar_height;
-      font-size: @super_large_font;
-      line-height: @contact_font * 2;
-    }
-
     .profile {
       font-size: @base_font;
       line-height: @base_font * 3 / 2;
     }
 
     .education,.projects,.work {
+      page-break-inside: avoid;
       .section_header {
         padding: @section_spacing 0 10px 0;
         hr {
@@ -102,20 +128,10 @@ body {
     height: 100%;
     flex: 0 0 auto;
 
-    .contact_info {
-      height: @headbar_height;
-      font-size: @contact_font;
-      width: @sidebar_width;
-
-      .contact_row {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-
     .skills,.classes,.books {
+      page-break-inside: avoid;
       .skills_table,.classes_table,.books_table {
+        margin-top: -10px;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -126,7 +142,7 @@ body {
           flex-wrap: nowrap;
           justify-content: space-between;
           font-size: @small_font;
-          padding-bottom: 10px;
+          padding-top: 10px;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -194,8 +210,8 @@ body {
       text-align: right;
     }
     .styleButton {
-      height: @large_font - 2;
-      line-height: @large_font - 2;
+      height: @large_font;
+      line-height: @large_font;
       padding: 0 5px;
       font-size: @small_font;
       display: inline-block;
@@ -249,11 +265,16 @@ body {
   }
 }
 
+.pdf_link {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 @media (max-width: @min_page_width_for_full_layout) {
   #app {
     width: 80%;
-    margin: 0 10%;
+    margin: 0 auto;
     .flexbody {
       flex-wrap: wrap-reverse;
     }
@@ -267,27 +288,65 @@ body {
           display: none;
         }
       }
-      .yale_name {
-        font-size: @super_large_font * .9;
-      }
+    }
+    .name {
+      font-size: @super_large_font * .9;
     }
   }
 }
+
 @media (max-width: @small_title_width) {
   #app {
-    width: 80%;
-    margin: 0 10%;
-    .flexbody {
-      flex-wrap: wrap-reverse;
+    .name {
+      font-size: @super_large_font * .7;
+      white-space: normal;
+      text-align: center;
     }
+  }
+}
+
+@media print {
+  html {
+    font-size: 50%;
+  }
+  #app {
+    width: 90%;
+
+    .flexheader {
+      flex-wrap: nowrap;
+      flex-direction: row-reverse;
+    }
+
     .sidebar {
-      width: 90%;
+      margin-top: -20px !important;
     }
-    .mainbar {
-      min-width: 0;
-      .yale_name {
-        font-size: @super_large_font * .7;
+
+    .section_header {
+      padding-top: 10px !important;
+    }
+
+    .class_row, .skill_row, .book_row {
+      padding-top: 5px !important;
+      &:nth-child(2n+1) {
+        border-bottom: 1px solid @odd_color;
       }
+      &:nth-child(2n) {
+        border-bottom: 1px solid @odd_color;
+      }
+    }
+
+    .info_box {
+      padding: 5px !important;
+
+      ul {
+        li {
+          padding: 2px 0 !important;
+        }
+      }
+    }
+
+    .classes {
+      display: none;
     }
   }
 }

@@ -1,12 +1,8 @@
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
 
-var Header = React.createClass({
-  propTypes: {
-    text: React.PropTypes.string,
-    align: React.PropTypes.string,
-    content: React.PropTypes.element
-  },
-  render: function() {
+class Header extends React.Component {
+  render() {
     return (
       <div className={ this.props.align == 'left' ? "section_header align_left" : "section_header" }>
         <div className="item_wrapper">
@@ -16,6 +12,12 @@ var Header = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = Header;
+Header.propTypes = {
+  text: PropTypes.string,
+  align: PropTypes.string,
+  content: PropTypes.element
+};
+
+export default Header;

@@ -1,21 +1,20 @@
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
 
-var StyleMenu = React.createClass({
-  propTypes: {
-    text: React.PropTypes.string,
-    options: React.PropTypes.array,
-    callback: React.PropTypes.func // function that gets called when option selected
-    // callback(selected) where the argument is the index of the selected option in options[]
-  },
-  getInitialState: function() {
-    return { open: false };
-  },
+class StyleMenu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
 
-  toggleMenu: function() {
+  toggleMenu() {
     this.setState({ open: !this.state.open });
-  },
+  }
 
-  render: function() {
+  render() {
     var maybeMenu = null;
 
     if (this.state.open) {
@@ -30,12 +29,11 @@ var StyleMenu = React.createClass({
         <div className='options_wrapper'>
           {this.props.options.map(function(option, i) {
             var cb = callbackMaker(i).bind(self);
-            return (<div className='option' onClick={cb}>{option}</div>);
+            return (<div className='option' onClick={cb} key={option}>{option}</div>);
           })}
         </div>
       );
     }
-
 
     return (
       <div className='menu_wrapper'>
@@ -46,6 +44,13 @@ var StyleMenu = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = StyleMenu;
+StyleMenu.propTypes = {
+  text: PropTypes.string,
+  options: PropTypes.array,
+  callback: PropTypes.func // function that gets called when option selected
+  // callback(selected) where the argument is the index of the selected option in options[]
+};
+
+export default StyleMenu;

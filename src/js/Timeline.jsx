@@ -1,46 +1,33 @@
-var React = require('react');
-var Resizable = require('react-component-resizable');
-var Tappable = require('react-tappable');
-var dateFormat = require('dateFormat');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Resizable from 'react-component-resizable';
+import Tappable from 'react-tappable';
+import dateFormat from 'dateFormat';
 
-
-var Timeline = React.createClass({
-  propTypes: {
-    content: React.PropTypes.array,
-    toNumber: React.PropTypes.func,
-    numberToString: React.PropTypes.func,
-    generateAxes: React.PropTypes.func,
-    axesTics: React.PropTypes.number,
-    title: React.PropTypes.string,
-    lower: React.PropTypes.number,
-    higher: React.PropTypes.number
-  },
-  getDefaultProps: function() {
-    return {
-      toNumber: function(numericalData) {
-        //assuming date
-        return new Date(numericalData).getTime();
-      },
-      axesTics: function() { return Math.floor(20 * window.innerWidth / 1200)}
+class Timeline extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      order: 0
     };
-  },
+    this.reorder = this.reorder.bind(this);
+  }
 
-  numberToString: function(numericalData) {
+  numberToString(numericalData) {
     if (this.props.numberToString) { return this.props.numberToString(numericalData); }
     if (this.props.toNumber('1/12/1993') == '726825600000') {
       //we're dealing with dates here
       return dateFormat(new Date(numericalData), 'mmm yyyy');
     }
     return numericalData;
-  },
+  }
 
-  handleResize: function(e) {
+  handleResize(e) {
     this.gennedAxesOutput = false;
     this.forceUpdate();
-  },
+  }
 
-
-  generateAxes: function(lower, higher) {
+  generateAxes(lower, higher) {
     if (this.props.generateAxes) { return this.props.generateAxes(lower, higher); }
     if (this.gennedAxesOutput) { return this.gennedAxesOutput; }
     var out = [];
@@ -83,16 +70,13 @@ var Timeline = React.createClass({
     })
     this.gennedAxesOutput = processed;
     return processed;
-  },
+  }
 
-
-  getInitialState: function() {
-    return { order: 0 };
-  },
-  reorder: function() {
+  reorder() {
     this.setState({ order: ((this.state.order + 1) % 3) });
-  },
-  render: function() {
+  }
+
+  render() {
     var content = this.props.content;
     if (this.props.content && this.props.content[0] && this.props.content[0].start) {
       content = [this.props.content];
@@ -132,18 +116,29 @@ var Timeline = React.createClass({
       </div>
     );
   }
-});
+}
 
-var TimeRow = React.createClass({
-  propTypes: {
-    content: React.PropTypes.array,
-    toNumber: React.PropTypes.func,
-    numberToString: React.PropTypes.func,
-    lower: React.PropTypes.number,
-    higher: React.PropTypes.number,
+Timeline.propTypes = {
+  content: PropTypes.array,
+  toNumber: PropTypes.func,
+  numberToString: PropTypes.func,
+  generateAxes: PropTypes.func,
+  axesTics: PropTypes.number,
+  title: PropTypes.string,
+  lower: PropTypes.number,
+  higher: PropTypes.number
+};
+
+Timeline.defaultProps = {
+  toNumber: function(numericalData) {
+    return new Date(numericalData).getTime(); //assuming date
   },
+  axesTics: function() { return Math.floor(20 * window.innerWidth / 1200)}
+};
 
-  render: function() {
+
+class TimeRow extends React.Component {
+  render() {
     var self = this;
     var lowerNum = this.props.toNumber(this.props.lower);
     var higherNum = this.props.toNumber(this.props.higher);
@@ -154,16 +149,19 @@ var TimeRow = React.createClass({
       </div>
     );
   }
-});
+}
 
-var TimeTic = React.createClass({
-  propTypes: {
-    toNumber: React.PropTypes.func,
-    data: React.PropTypes.object,
-    lower: React.PropTypes.number,
-    higher: React.PropTypes.number
-  },
-  render: function() {
+TimeRow.propTypes = {
+  content: PropTypes.array,
+  toNumber: PropTypes.func,
+  numberToString: PropTypes.func,
+  lower: PropTypes.number,
+  higher: PropTypes.number,
+};
+
+
+class TimeTic extends React.Component {
+  render() {
     var sizeNum = this.props.higher - this.props.lower;
     var myLower = this.props.toNumber(this.props.data.start);
     var myUpper = this.props.toNumber(this.props.data.end);
@@ -177,31 +175,39 @@ var TimeTic = React.createClass({
     return (
       <div className='time_tic' style={style}>{this.props.data.header}<Tooltip data={this.props.data} /></div>
       );
-  },
-});
+  }
+}
 
-var TimeSlider = React.createClass({
-  propTypes: {
-    toNumber: React.PropTypes.func,
-    numberToString: React.PropTypes.func,
-    lower: React.PropTypes.number,
-    higher: React.PropTypes.number
-  },
-  getInitialState: function() {
-    return {
+TimeTic.propTypes = {
+  toNumber: PropTypes.func,
+  data: PropTypes.object,
+  lower: PropTypes.number,
+  higher: PropTypes.number
+};
+
+
+class TimeSlider extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       isShowing: false
     };
-  },
-  mouseMove: function(e) {
+    this.mouseMove = this.mouseMove.bind(this);
+    this.mouseLeave = this.mouseLeave.bind(this);
+  }
+
+  mouseMove(e) {
     this.setState({ isShowing: true });
     debugger;
     this.setState(xPos, e);
     return true;
-  },
-  mouseLeave: function() {
+  }
+
+  mouseLeave() {
     this.setState({ isShowing: false });
-  },
-  render: function() {
+  }
+
+  render() {
     var wrapperStyle = {
       position: 'absolute',
       top: 0,
@@ -225,15 +231,19 @@ var TimeSlider = React.createClass({
         <div className='slider'></div>
       </div>
       );
-  },
-});
+  }
+}
+
+TimeSlider.propTypes = {
+  toNumber: PropTypes.func,
+  numberToString: PropTypes.func,
+  lower: PropTypes.number,
+  higher: PropTypes.number
+};
 
 
-var Tooltip = React.createClass({
-  propTypes: {
-    data: React.PropTypes.object
-  },
-  render: function() {
+class Tooltip extends React.Component {
+  render() {
     return (
       <div className='time_tooltip'>
         {this.props.data.header} <br/>
@@ -242,6 +252,10 @@ var Tooltip = React.createClass({
       </div>
     )
   }
-});
+}
 
-module.exports = Timeline;
+Tooltip.propTypes = {
+  data: PropTypes.object
+}
+
+export default Timeline;
