@@ -6,7 +6,7 @@ const content = require('./content.js');
 const InfoList = require('./InfoList.jsx');
 const Header = require('./Header.jsx');
 
-const PdfResume = require('./PdfResume.jsx');
+const PdfResume = require('./PdfResume.jsx').default;
 
 
 const queryStringParams = new URLSearchParams(window.location.search);

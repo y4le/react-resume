@@ -165,4 +165,4 @@ PdfResume.propTypes = {
   content: PropTypes.object
 };
 
-module.exports = PdfResume;
+export default PdfResume;
