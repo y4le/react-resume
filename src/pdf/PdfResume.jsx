@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: 'column',
     backgroundColor: '#E4E4E4',
-    fontSize: 11,
+    fontSize: 10,
     padding: 50,
     height: '100%',
     position: 'relative'
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   workHeader: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'start',
     paddingTop: 0,
     paddingRight: 0,
     paddingLeft: 0,
@@ -145,7 +145,7 @@ const PdfResume = props => (
               <View style={styles.workRow} key={job.title}>
                 <View style={styles.workHeader}>
                   <Text style={styles.workTitle}> {job.title} - {job.job_title} </Text>
-                  <Text style={styles.workDate}> {job.start_date} - {job.end_date} </Text>
+                  <Text style={styles.workDate}> ({job.start_date} - {job.end_date}) </Text>
                 </View>
                 <View style={styles.workNotes}>
                   {job.notes.map(note => (<Text style={styles.workNote}> {note} </Text>))}
