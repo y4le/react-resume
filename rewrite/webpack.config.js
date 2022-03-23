@@ -1,11 +1,12 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/js/app.js',
   output: {
     filename: 'main.js',
-      path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -29,6 +30,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new HtmlWebpackPlugin({template: path.join(__dirname, 'src', 'index.html')}),
     // Work around for Buffer is undefined:
     // https://github.com/webpack/changelog-v5/issues/10
     new webpack.ProvidePlugin({
@@ -41,7 +43,7 @@ module.exports = {
   resolve: {
     fallback: {
       stream: require.resolve('stream-browserify'),
-        zlib: require.resolve('browserify-zlib'),
+      zlib: require.resolve('browserify-zlib'),
       buffer: require.resolve('buffer')
     }
   }
