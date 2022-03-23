@@ -529,7 +529,8 @@ export default Object.freeze({
   // Skill related stuff
   SKILLS: [
     { name: 'Ruby', skill: .7, category: 'backend' },
-    { name: 'Java', skill: .4, category: 'backend' },
+    { name: 'Java', skill: .9, category: 'backend' },
+    { name: 'Kotlin', skill: .2, category: 'backend' },
     { name: 'Python', skill: .9, category: 'backend' },
     { name: 'Tensorflow', skill: .5, category: 'ml' },
     { name: 'Spark', skill: .6, category: 'ml' },
@@ -538,8 +539,6 @@ export default Object.freeze({
     { name: 'Javascript', skill: .9, category: 'web' },
     { name: 'Bash', skill: .5, category: 'script' },
     { name: 'SQL', skill: .7, category: 'backend' },
-    { name: 'SVN', skill: .1, category: 'version' },
-    { name: 'Git', skill: .7, category: 'version' },
     { name: 'Matlab', skill: .3, category: 'math' },
     { name: 'Mathematica', skill: .5, category: 'math' },
     { name: 'Photoshop', skill: .6, category: 'adobe' },
@@ -654,7 +653,7 @@ export default Object.freeze({
       notes: [
         'Worked on improving the default android "phone" app.',
         'First significant project was helping finish up the automatic call screening feature.',
-        'Worked with one other employee to prototype a new test framework that is now in use to run the same test suite as unit/emulator/device tests.',
+        'Worked with one other coworker to prototype a new test framework that is now in use to run the same test suite as unit/emulator/device tests.',
         'Handled client side implementation of the initial i18n pilot for call screen (Japanese support).',
         'Built crowdsourcing flows to collect caller ID/tagging information.',
         'Working with: java, kotlin, android'
@@ -667,12 +666,13 @@ export default Object.freeze({
       start_date: '2017',
       end_date: '2018',
       notes: [
-        'H1: Started off working on front end web. Pitched, got 2 weeks to build, and demoed a react version of Tophatter. Didn\'t get support to move forward with it.',
-        'H2: Learned Rails and transitioned to full stack.',
-        'H3: Moved to data team, was tasked with personalization. Pitched, architected, and implemented collaborative filtering model for product recommendation.',
-        'H4: Worked with team of 3 to rebuild product deduplication pipeline from the ground up. Used neural networks to process item features into a few feature vectors, generated candidates using faiss vector similarity search, judged if candidates were actually duplicates using a random forest (couldn\'t generate good enough training data to make the NN I was playing with better)',
-        'H5: Pitched, designed, and built a human review queue for our model to get ground truth data for product deduplication. This improved the performance of the NN I had set aside before, deduplication now powered by a siamese network. Closed the training loop so the system will continue to improve with time.',
-        'H6: Infrastructure work on data pipelines. Built service that efficiently tracks recent user-product interactions using ring buffers in redis. Requested a week to work on web performance and had a big win: stat sig +6% new user conversion and +4% total revenue on web.',
+        'Started off working on front end web. Demoed a react version of Tophatter but didn\'t get support to move forward with it.',
+        'Learned Rails and transitioned to full stack.',
+        'Pitched and worked with a team of 3 to build a collaborative filtering model for product recommendation.',
+        'Worked with team of 3 to rebuild product deduplication pipeline from the ground up. Used neural networks to process item features into a few feature vectors, generated candidates using faiss vector similarity search, judged if candidates were actually duplicates using a random forest.',
+        'Pitched, designed, and built a human review queue for our model to get ground truth data for product deduplication. This improved the performance of a NN I had set aside before to the point where it replaced the random forest model. Closed the training loop so the system will continue to improve with time.',
+        'Infrastructure work on data pipelines. Built service that efficiently tracks recent user-product interactions using ring buffers in redis.',
+        'In my final quarter I requested a week to work on web performance and had a big win by fixing viewport rendering: stat sig +6% new user conversion and +4% total revenue on web.',
         'Worked with: rails, coffeescript, python, spark, tensorflow'
       ]
     },
