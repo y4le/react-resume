@@ -653,10 +653,10 @@ export default Object.freeze({
       end_date: '2022',
       notes: [
         'Worked on improving the default android "phone" app.',
-        'First significant project was to help finish the automatic call screening feature',
-        'Worked with one other employee to prototype a new test framework that is now in use to run the same test suite as unit/emulator/device tests',
-        'Worked on the initial i18n pilot for the call screen feature (Japanese support)',
-        'Built crowdsourcing flows to collect caller ID/tagging information',
+        'First significant project was helping finish up the automatic call screening feature.',
+        'Worked with one other employee to prototype a new test framework that is now in use to run the same test suite as unit/emulator/device tests.',
+        'Handled client side implementation of the initial i18n pilot for call screen (Japanese support).',
+        'Built crowdsourcing flows to collect caller ID/tagging information.',
         'Working with: java, kotlin, android'
       ]
     },
