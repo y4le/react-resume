@@ -19,19 +19,22 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: ["babel-loader"]
       },
       {
         test: /\.(css)$/,
+        include: path.resolve(__dirname, 'src'),
         use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(less)$/,
+        include: path.resolve(__dirname, 'src'),
         use: ["style-loader", "css-loader", "less-loader"],
       },
       {
         test: /\.(pdf)$/,
+        include: path.resolve(__dirname, 'src'),
         type: 'asset'
       },
     ],

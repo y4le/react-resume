@@ -6,7 +6,7 @@
   "author": "Yale Thomas",
   "license": "MIT",
   "scripts": {
-    "pdf": "node ./src/pdf/pdf.mjs"
+    "pdf": "node ./src/pdf/makePdf.js"
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",
