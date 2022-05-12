@@ -652,10 +652,11 @@ export default Object.freeze({
       end_date: '2022',
       notes: [
         'Worked on improving the default android "phone" app.',
-        'First significant project was helping finish up the automatic call screening feature.',
+        'Collaborated with a large team to build the automatic call screening feature.',
         'Worked with one other coworker to prototype a new test framework that is now in use to run the same test suite as unit/emulator/device tests.',
         'Handled client side implementation of the initial i18n pilot for call screen (Japanese support).',
-        'Built crowdsourcing flows to collect caller ID/tagging information.',
+        'Built crowdsourcing flows to collect and process caller ID/tagging information.',
+        'Co-inventor of two patents: one has been granted for [automatic call screening](https://patents.google.com/patent/WO2021101935A1), the second is related to caller tagging and is still pending.',
         'Working with: java, kotlin, android'
       ]
     },
