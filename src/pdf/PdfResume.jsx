@@ -148,7 +148,10 @@ const PdfResume = props => (
                   <Text style={styles.workDate}> ({job.start_date} - {job.end_date}) </Text>
                 </View>
                 <View style={styles.workNotes}>
-                  {job.notes.map(note => (<Text style={styles.workNote}> {note} </Text>))}
+                  {job.notes.map((note) => {
+                    const noteWithoutLinks = note.replace(/\[([^\]]+)]\(([^\)]+)\)/, '$1');
+                    return (<Text style={styles.workNote} key={note}> {noteWithoutLinks} </Text>);
+                  })}
                 </View>
               </View>
             );

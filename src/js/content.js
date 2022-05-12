@@ -811,7 +811,10 @@ export default Object.freeze({
       <div key={infoRow.title + infoRow.end_date} className='info_box'>
         <div className='info_header'><div className='info_name'>{mainTitle}{extraTitle}</div><div className='info_dates'>{startDate}{infoRow.end_date}</div></div>
         <ul>
-          {infoRow.notes.map(function(note) { return (<li key={note}>{note}</li>); })}
+          {infoRow.notes.map((note) => {
+            const noteWithLinks = note.replace(/\[([^\]]+)]\(([^\)]+)\)/, '<a href="$2">$1</a>');
+            return (<li key={note} dangerouslySetInnerHTML={{ __html: noteWithLinks }} />);
+          })}
         </ul>
       </div>
     );
