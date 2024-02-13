@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 class BigButton extends React.Component {
-  render() {
+  static propTypes = {
+    text: PropTypes.string,
+    handleClick: PropTypes.func
+  }
+
+  render () {
     return (
-      <div onClick={this.props.clicked} className="styleButton">
+      <div onClick={this.props.handleClick} className='styleButton'>
         <div>{this.props.text}</div>
       </div>
-    );
+    )
   }
 }
 
-BigButton.propTypes: {
-  text: PropTypes.string,
-  clicked: PropTypes.func
-};
-
-export default BigButton;
+export default BigButton

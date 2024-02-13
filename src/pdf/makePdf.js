@@ -7,11 +7,8 @@
  * This file initializes babel to transpile the rest of the node script.
  */
 
-
 require('@babel/register')({
   ignore: [/(node_modules)/]
 })
 
-
-require('./pdfRenderer');
-
+require('./pdfRenderer')

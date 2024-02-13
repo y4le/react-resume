@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer'
 
 // Create styles
 const styles = StyleSheet.create({
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 
   profileText: {
     padding: 0,
-    margin: 0,
+    margin: 0
   },
 
   headerRow: {
@@ -100,13 +100,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 11
   }
-});
-
+})
 
 // Create Document Component
 const PdfResume = props => (
   <Document>
-    <Page size="A4" style={styles.page}>
+    <Page size='A4' style={styles.page}>
 
       <View style={styles.horizontalWrapper}>
 
@@ -118,29 +117,29 @@ const PdfResume = props => (
           </View>
 
           <View style={styles.profile}>
-            {props.content.profile.map(function(para) { return (<Text style={styles.profileText}>{para}</Text>); })}
+            {props.content.profile.map(function (para) { return (<Text style={styles.profileText}>{para}</Text>) })}
           </View>
         </View>
 
         <View style={styles.skillsSection}>
-          {props.content.SKILLS.
-            sort(function(a, b) { return props.content.skillComparator(a, b, props.content.skillOrderings.indexOf('category')); }).
-            map(skill => {
+          {props.content.SKILLS
+            .sort(function (a, b) { return props.content.skillComparator(a, b, props.content.skillOrderings.indexOf('category')) })
+            .map(skill => {
               return (
                 <View style={styles.skillRow} key={skill.name}>
                   <Text> {skill.name} </Text>
                   <Text> {props.content.skillText(skill.skill)} </Text>
                 </View>
-              );
-          })}
+              )
+            })}
         </View>
       </View>
 
       <View style={styles.workSection}>
-        {props.content.WORK.
-          sort(function(a, b) { return props.content.profileComparator(a, b, 1); }).
-          map(job => {
-            if (job.skippable) { return null; }
+        {props.content.WORK
+          .sort(function (a, b) { return props.content.profileComparator(a, b, 1) })
+          .map(job => {
+            if (job.skippable) { return null }
             return (
               <View style={styles.workRow} key={job.title}>
                 <View style={styles.workHeader}>
@@ -149,23 +148,23 @@ const PdfResume = props => (
                 </View>
                 <View style={styles.workNotes}>
                   {job.notes.map((note) => {
-                    const noteWithoutLinks = note.replace(/\[([^\]]+)]\(([^\)]+)\)/, '$1');
-                    return (<Text style={styles.workNote} key={note}> {noteWithoutLinks} </Text>);
+                    const noteWithoutLinks = note.replace(/\[([^\]]+)]\(([^\)]+)\)/, '$1')
+                    return (<Text style={styles.workNote} key={note}> {noteWithoutLinks} </Text>)
                   })}
                 </View>
               </View>
-            );
-        })}
+            )
+          })}
       </View>
 
       <Text style={styles.footerRow}> see {props.content.link} for full resume </Text>
 
     </Page>
   </Document>
-);
+)
 
 PdfResume.propTypes = {
   content: PropTypes.object
-};
+}
 
-export default PdfResume;
+export default PdfResume
