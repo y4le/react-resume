@@ -62,7 +62,7 @@ export default Object.freeze({
 
   // Profile stuff, array of string paragraphs
   profile: [
-    'I am a software engineer at Google working on improving android\'s phone app. I grew up along side the field of UX and developed a passion for improving the ergonomics of human-computer interaction. At first I approached the problem from the perspective of UI design, "The Visual Display of Quantitative Information" had quite an impact on me, and showed me how much better our programs can be at talking to humans. Recently I have been more interested in improving that conversation from a different direction, using machine learning to answer questions and surface information that would otherwise be too difficult to communicate. I am transhumanist at heart and believe that we are quickly moving towards a time where the boundary between user and computer will fade. I want to help us get there.'
+    'I am a software engineer at Google working on improving android\'s phone app. I enjoy working with a variety of technology, from backend to data science up through the client. A particular passion of mine is using machine learning to answer questions and surface information that would otherwise be too difficult to communicate. I am transhumanist at heart and believe that we are quickly moving towards a time where the boundary between user and computer will fade. I want to help us get there.'
   ],
 
   // Books
@@ -651,11 +651,13 @@ export default Object.freeze({
       start_date: '2019',
       end_date: '2022',
       notes: [
-        'Worked on improving the default android "phone" app.',
+        'Working on improving the default android "phone" app.',
         'Collaborated with a large team to build the automatic call screening feature.',
         'Worked with one other coworker to prototype a new test framework that is now in use to run the same test suite as unit/emulator/device tests.',
         'Handled client side implementation of the initial i18n pilot for call screen (Japanese support).',
-        'Built crowdsourcing flows to collect and process caller ID/tagging information.',
+        'Implemented and launched caller tags, a less specific type of caller ID that tells users what type of business is calling.',
+        'Set up crowdsourcing flows to continually improve our caller ID/tag coverage.',
+        'Built server side pipeline for internationalizing and hosting the set of available caller tags. Continuing work on server side heuristics/anti abuse policy to choose caller tags based on past feedback.',
         'Co-inventor of two patents: one has been granted for [automatic call screening](https://patents.google.com/patent/WO2021101935A1), the second is related to caller tagging and is still pending.',
         'Working with: java, kotlin, android'
       ]
