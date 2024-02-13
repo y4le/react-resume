@@ -1,0 +1,3 @@
+[submodule "resume-content"]
+	path = src/resume-content
+	url = git@github.com:y4le/resume-content.git
