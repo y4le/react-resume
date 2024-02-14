@@ -34,7 +34,7 @@ const jsx = (
         </div>
         <EventList title='Work' events={content.WORK} />
         <EventList title='Education' events={content.EDUCATION} />
-        <EventList title='Projects' events={content.PROJECTS} />
+        <EventList title='Projects' events={content.PROJECTS} showLinks />
       </div>
     </div>
     <div className='pdf_link'>

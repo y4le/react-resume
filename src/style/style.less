@@ -13,8 +13,8 @@
 @header_color: darken(@base_color, 40%, relative);
 
 
-@small_font: (@base_font * 4 / 5);
 @base_font: 1rem;
+@small_font: (@base_font * 4 / 5);
 @contact_font: (@base_font * 4 / 3);
 @large_font: (@base_font * 2);
 @super_large_font: (@base_font * 4);
@@ -121,6 +121,21 @@ body {
         justify-content: space-between;
         font-size: @contact_font;
       }
+
+      .used_skills {
+        display: flex;
+      }
+
+      .used_skill {
+        background-color: white;
+        border: none;
+        padding: 8px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0px 2px;
+        border-radius: 16px;
+      }
     }
   }
   .sidebar {
@@ -128,15 +143,15 @@ body {
     height: 100%;
     flex: 0 0 auto;
 
-    .skills,.classes,.books {
+    .skills,.classes {
       page-break-inside: avoid;
-      .skills_table,.classes_table,.books_table {
+      .skills_table,.classes_table {
         margin-top: -10px;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
 
-        .skill_row,.class_row,.books_row {
+        .skill_row,.class_row {
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
@@ -153,35 +168,6 @@ body {
             font-size: @small_font;
             display: flex;
             flex-direction: row;
-          }
-        }
-        .books_row {
-          font-size: 12px;
-          flex-direction: column;
-          .book_row {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            align-items: center;
-
-            .book_title {
-              font-size: 16px;
-              max-width: 70%;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-
-            .book_rating_wrapper {
-              width: 60px;
-              height: 10px;
-              border: 1px solid @base_color;
-
-              .book_rating {
-                height: 10px;
-                background-color: @odd_color;
-              }
-            }
           }
         }
       }
@@ -325,7 +311,7 @@ body {
       padding-top: 10px !important;
     }
 
-    .class_row, .skill_row, .book_row {
+    .class_row, .skill_row {
       padding-top: 5px !important;
       &:nth-child(2n+1) {
         border-bottom: 1px solid @odd_color;
