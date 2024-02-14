@@ -11,7 +11,7 @@ import { Header } from './Header.jsx'
 import { SkillList } from './SkillList.jsx'
 import { EventList } from './EventList.jsx'
 
-const PROFILE = content.PROFILE[0] // TODO: fix when we export dict rather than array
+const PROFILE = content.PROFILE
 
 const jsx = (
   <div>
