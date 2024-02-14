@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "pdf": "node ./src/pdf/makePdf.js",
-    "buildProd": "npm run pdf && npx webpack --mode production",
+    "buildProd": "yarn run pdf && npx webpack --mode production",
     "server": "npx webpack-dev-server --mode development"
   },
   "devDependencies": {
