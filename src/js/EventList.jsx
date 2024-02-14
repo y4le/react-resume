@@ -13,7 +13,7 @@ class EventList extends React.Component {
     const mainTitle = infoRow.title_link ? (<a href={infoRow.title_link}>{infoRow.title}</a>) : infoRow.title
     const extraTitle = (infoRow.job_title) ? ' - ' + infoRow.job_title : null
     const startDate = infoRow.start_date ? infoRow.start_date + ' - ' : null
-    const notesWithLinks = infoRow.notes.replace(/\[([^\]]+)]\(([^\)]+)\)/g, '<a href="$2">$1</a>')
+    const notesWithLinks = infoRow.notes.replace(/\[([^\]]+)]\(([^)]+)\)/g, '<a href="$2">$1</a>')
     return (
       <div key={infoRow.title + infoRow.end_date} className='info_box'>
         <div className='info_header'><div className='info_name'>{mainTitle}{extraTitle}</div><div className='info_dates'>{startDate}{infoRow.end_date}</div></div>
