@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import StyleMenu from './StyleMenu.jsx'
-import Header from './Header.jsx'
+
+import { StyleMenu } from './StyleMenu.jsx'
+import { Header } from './Header.jsx'
 
 class InfoList extends React.Component {
   static propTypes = {
@@ -50,4 +51,4 @@ class InfoList extends React.Component {
   }
 }
 
-export default InfoList
+export { InfoList }

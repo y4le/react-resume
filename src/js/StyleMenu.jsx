@@ -2,6 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 class StyleMenu extends React.Component {
+  static propTypes = {
+    text: PropTypes.string,
+    options: PropTypes.array,
+    callback: PropTypes.func // function that gets called when option selected
+    // callback(selected) where the argument is the index of the selected option in options[]
+  }
+
   constructor (props) {
     super(props)
     this.state = {
@@ -46,11 +53,4 @@ class StyleMenu extends React.Component {
   }
 }
 
-StyleMenu.propTypes = {
-  text: PropTypes.string,
-  options: PropTypes.array,
-  callback: PropTypes.func // function that gets called when option selected
-  // callback(selected) where the argument is the index of the selected option in options[]
-}
-
-export default StyleMenu
+export { StyleMenu }

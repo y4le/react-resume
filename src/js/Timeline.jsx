@@ -5,6 +5,24 @@ import Tappable from 'react-tappable'
 import dateFormat from 'dateFormat'
 
 class Timeline extends React.Component {
+  static propTypes = {
+    content: PropTypes.array,
+    toNumber: PropTypes.func,
+    numberToString: PropTypes.func,
+    generateAxes: PropTypes.func,
+    axesTics: PropTypes.number,
+    title: PropTypes.string,
+    lower: PropTypes.number,
+    higher: PropTypes.number
+  }
+
+  static defaultProps = {
+    toNumber: function (numericalData) {
+      return new Date(numericalData).getTime() // assuming date
+    },
+    axesTics: function () { return Math.floor(20 * window.innerWidth / 1200) }
+  }
+
   constructor (props) {
     super(props)
     this.state = {
@@ -118,25 +136,15 @@ class Timeline extends React.Component {
   }
 }
 
-Timeline.propTypes = {
-  content: PropTypes.array,
-  toNumber: PropTypes.func,
-  numberToString: PropTypes.func,
-  generateAxes: PropTypes.func,
-  axesTics: PropTypes.number,
-  title: PropTypes.string,
-  lower: PropTypes.number,
-  higher: PropTypes.number
-}
-
-Timeline.defaultProps = {
-  toNumber: function (numericalData) {
-    return new Date(numericalData).getTime() // assuming date
-  },
-  axesTics: function () { return Math.floor(20 * window.innerWidth / 1200) }
-}
-
 class TimeRow extends React.Component {
+  static propTypes = {
+    content: PropTypes.array,
+    toNumber: PropTypes.func,
+    numberToString: PropTypes.func,
+    lower: PropTypes.number,
+    higher: PropTypes.number
+  }
+
   render () {
     const self = this
     const lowerNum = this.props.toNumber(this.props.lower)
@@ -150,15 +158,14 @@ class TimeRow extends React.Component {
   }
 }
 
-TimeRow.propTypes = {
-  content: PropTypes.array,
-  toNumber: PropTypes.func,
-  numberToString: PropTypes.func,
-  lower: PropTypes.number,
-  higher: PropTypes.number
-}
-
 class TimeTic extends React.Component {
+  static propTypes = {
+    toNumber: PropTypes.func,
+    data: PropTypes.object,
+    lower: PropTypes.number,
+    higher: PropTypes.number
+  }
+
   render () {
     const sizeNum = this.props.higher - this.props.lower
     const myLower = this.props.toNumber(this.props.data.start)
@@ -176,14 +183,14 @@ class TimeTic extends React.Component {
   }
 }
 
-TimeTic.propTypes = {
-  toNumber: PropTypes.func,
-  data: PropTypes.object,
-  lower: PropTypes.number,
-  higher: PropTypes.number
-}
-
 class TimeSlider extends React.Component {
+  static propTypes = {
+    toNumber: PropTypes.func,
+    numberToString: PropTypes.func,
+    lower: PropTypes.number,
+    higher: PropTypes.number
+  }
+
   constructor (props) {
     super(props)
     this.state = {
@@ -231,14 +238,11 @@ class TimeSlider extends React.Component {
   }
 }
 
-TimeSlider.propTypes = {
-  toNumber: PropTypes.func,
-  numberToString: PropTypes.func,
-  lower: PropTypes.number,
-  higher: PropTypes.number
-}
-
 class Tooltip extends React.Component {
+  static propTypes = {
+    data: PropTypes.object
+  }
+
   render () {
     return (
       <div className='time_tooltip'>
@@ -250,8 +254,4 @@ class Tooltip extends React.Component {
   }
 }
 
-Tooltip.propTypes = {
-  data: PropTypes.object
-}
-
-export default Timeline
+export { Timeline }

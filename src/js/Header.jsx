@@ -20,4 +20,4 @@ Header.propTypes = {
   content: PropTypes.element
 }
 
-export default Header
+export { Header }

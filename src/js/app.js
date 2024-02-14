@@ -6,8 +6,8 @@ import '../style/style.less'
 import content from './content.js'
 import pdfFile from '../pdf/resume.pdf'
 
-import InfoList from './InfoList.jsx'
-import Header from './Header.jsx'
+import { InfoList } from './InfoList.jsx'
+import { Header } from './Header.jsx'
 
 const jsx = (
   <div>

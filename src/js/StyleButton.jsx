@@ -16,4 +16,4 @@ class BigButton extends React.Component {
   }
 }
 
-export default BigButton
+export { BigButton }
