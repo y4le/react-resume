@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "pdf": "node ./src/pdf/makePdf.js",
-    "buildProd": "npm run pdf && webpack --mode production"
+    "buildProd": "npm run pdf && npx webpack --mode production",
+    "server": "npx webpack-dev-server --mode development"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
