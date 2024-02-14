@@ -45,7 +45,7 @@ class SkillList extends React.Component {
 
   render () {
     return (
-      <InfoList title='Skills' toJSX={this.skillToJSX} comparator={this.skillComparator} orderings={this.skillOrderings} content={this.props.skills} />
+      <InfoList title='Skills' toJSX={this.skillToJSX} comparator={this.skillComparator} orderings={SkillList.skillOrderings} content={this.props.skills} />
     )
   }
 }

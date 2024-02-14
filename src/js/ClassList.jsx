@@ -42,7 +42,7 @@ class ClassList extends React.Component {
 
   render () {
     return (
-      <InfoList title='Classes' toJSX={this.classToJSX} comparator={this.classComparator} orderings={this.classOrderings} content={this.props.classes} />
+      <InfoList title='Classes' toJSX={this.classToJSX} comparator={this.classComparator} orderings={ClassList.classOrderings} content={this.props.classes} />
     )
   }
 }
