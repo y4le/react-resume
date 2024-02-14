@@ -15,15 +15,7 @@ class ClassList extends React.Component {
     'alphabetic'
   ]
 
-  classToJSX (classRow) {
-    return (
-      <div key={classRow.name} className='class_row'>
-        <div className='class_name'>{classRow.name}</div><div className='class_info'><div>{classRow.subject + '-'}</div><div>{classRow.number}</div></div>
-      </div>
-    )
-  }
-
-  classComparator (a, b, ordering) {
+  static classComparator (a, b, ordering) {
     ordering = ordering || 0
     if (ordering === 0) {
       // semester sorting
@@ -40,9 +32,23 @@ class ClassList extends React.Component {
     }
   }
 
+  classToJSX (classRow) {
+    return (
+      <div key={classRow.name} className='class_row'>
+        <div className='class_name'>{classRow.name}</div><div className='class_info'><div>{classRow.subject + '-'}</div><div>{classRow.number}</div></div>
+      </div>
+    )
+  }
+
   render () {
     return (
-      <InfoList title='Classes' toJSX={this.classToJSX} comparator={this.classComparator} orderings={ClassList.classOrderings} content={this.props.classes} />
+      <InfoList
+        title='Classes'
+        toJSX={this.classToJSX}
+        comparator={ClassList.classComparator}
+        orderings={ClassList.classOrderings}
+        content={this.props.classes}
+      />
     )
   }
 }

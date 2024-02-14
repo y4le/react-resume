@@ -6,10 +6,10 @@ import '../style/style.less'
 import content from '../resume-content/dist/data.json'
 import pdfFile from '../pdf/resume.pdf'
 
-import { ClassList } from './ClassList.jsx'
+import { ClassList } from './lists/ClassList.jsx'
 import { Header } from './Header.jsx'
-import { SkillList } from './SkillList.jsx'
-import { EventList } from './EventList.jsx'
+import { SkillList } from './lists/SkillList.jsx'
+import { EventList } from './lists/EventList.jsx'
 
 const PROFILE = content.PROFILE
 

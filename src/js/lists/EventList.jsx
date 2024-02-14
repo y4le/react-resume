@@ -14,6 +14,12 @@ class EventList extends React.Component {
     showLinks: false
   }
 
+  static eventComparator (a, b, order) {
+    if (a.end_date === 'Now') { return -1 }
+    if (b.end_date === 'Now') { return 1 }
+    return a.end_date < b.end_date ? 1 : -1
+  }
+
   profileToJSX (infoRow, showLinks) {
     const mainTitle = infoRow.title_link && showLinks ? (<a href={infoRow.title_link}>{infoRow.title}</a>) : infoRow.title
     const extraTitle = (infoRow.job_title) ? ' - ' + infoRow.job_title : null
@@ -53,18 +59,12 @@ class EventList extends React.Component {
     )
   }
 
-  profileComparator (a, b, order) {
-    if (a.end_date === 'Now') { return -1 }
-    if (b.end_date === 'Now') { return 1 }
-    return a.end_date < b.end_date ? 1 : -1
-  }
-
   render () {
     return (
       <InfoList
         title={this.props.title}
         toJSX={(infoRow) => this.profileToJSX(infoRow, this.props.showLinks)}
-        comparator={this.profileComparator}
+        comparator={EventList.eventComparator}
         content={this.props.events}
       />
     )
