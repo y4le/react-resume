@@ -3,35 +3,38 @@ import ReactDOM from 'react-dom'
 
 import '../style/style.less'
 
-import content from './content.js'
+import content from '../resume-content/dist/data.json'
 import pdfFile from '../pdf/resume.pdf'
 
-import { InfoList } from './InfoList.jsx'
+import { ClassList } from './ClassList.jsx'
 import { Header } from './Header.jsx'
+import { SkillList } from './SkillList.jsx'
+import { EventList } from './EventList.jsx'
+
+const PROFILE = content.PROFILE[0] // TODO: fix when we export dict rather than array
 
 const jsx = (
   <div>
     <div className='flexheader'>
       <div className='contact_info'>
-        <div className='contact_row'>{content.number}<a href={content.linkedin}>linkedin</a></div>
-        <div className='contact_row'><a href={'mailto:' + content.email + '?Subject=Resume Response'} target='_top'>{content.email}</a> <a href={content.git}>git</a></div>
+        <div className='contact_row'>{PROFILE.number}<a href={PROFILE.linkedin}>linkedin</a></div>
+        <div className='contact_row'><a href={'mailto:' + PROFILE.email + '?Subject=Resume Response'} target='_top'>{PROFILE.email}</a> <a href={PROFILE.git}>git</a></div>
       </div>
-      <div className='name'>{content.name}</div>
+      <div className='name'>{PROFILE.name}</div>
     </div>
     <div className='flexbody'>
       <div className='sidebar'>
-        <InfoList title='Skills' toJSX={content.skillToJSX} comparator={content.skillComparator} orderings={content.skillOrderings} content={content.SKILLS} />
-        <InfoList title='Classes' toJSX={content.classToJSX} comparator={content.classComparator} orderings={content.classOrderings} content={content.CLASSES} />
-        {/* <InfoList title='Books' toJSX={content.bookToJSX} comparator={content.bookComparator} orderings={content.bookOrderings} content={content.BOOKS} /> */}
+        <SkillList skills={content.SKILLS} />
+        <ClassList classes={content.CLASSES} />
       </div>
       <div className='mainbar'>
         <div className='profile'>
           <Header text='Profile' />
-          {content.profile.map(function (para) { return (<p>{para}</p>) })}
+          <p>{PROFILE.profile}</p>
         </div>
-        <InfoList title='Work' toJSX={content.profileToJSX} comparator={content.profileComparator} content={content.WORK} />
-        <InfoList title='Education' toJSX={content.profileToJSX} comparator={content.profileComparator} content={content.EDUCATION} />
-        <InfoList title='Projects' toJSX={content.profileToJSX} comparator={content.profileComparator} content={content.PROJECTS} />
+        <EventList title='Work' events={content.WORK} />
+        <EventList title='Education' events={content.EDUCATION} />
+        <EventList title='Projects' events={content.PROJECTS} />
       </div>
     </div>
     <div className='pdf_link'>
