@@ -7,6 +7,6 @@ import ReactPDF from '@react-pdf/renderer'
 import path from 'path'
 
 import PdfResume from './PdfResume'
-import content from '../js/content'
+import content from '../resume-content/dist/data.json'
 
 ReactPDF.render(<PdfResume content={content} />, path.join(__dirname, 'resume.pdf'))

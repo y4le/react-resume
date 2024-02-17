@@ -20,7 +20,7 @@ class EventList extends React.Component {
     return a.end_date < b.end_date ? 1 : -1
   }
 
-  profileToJSX (infoRow, showLinks) {
+  static profileToJSX (infoRow, showLinks) {
     const mainTitle = infoRow.title_link && showLinks ? (<a href={infoRow.title_link}>{infoRow.title}</a>) : infoRow.title
     const extraTitle = (infoRow.job_title) ? ' - ' + infoRow.job_title : null
     const startDate = infoRow.start_date ? infoRow.start_date + ' - ' : null
@@ -63,7 +63,7 @@ class EventList extends React.Component {
     return (
       <InfoList
         title={this.props.title}
-        toJSX={(infoRow) => this.profileToJSX(infoRow, this.props.showLinks)}
+        toJSX={(infoRow) => EventList.profileToJSX(infoRow, this.props.showLinks)}
         comparator={EventList.eventComparator}
         content={this.props.events}
       />

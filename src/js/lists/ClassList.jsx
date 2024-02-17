@@ -32,7 +32,7 @@ class ClassList extends React.Component {
     }
   }
 
-  classToJSX (classRow) {
+  static classToJSX (classRow) {
     return (
       <div key={classRow.name} className='class_row'>
         <div className='class_name'>{classRow.name}</div><div className='class_info'><div>{classRow.subject + '-'}</div><div>{classRow.number}</div></div>
@@ -44,7 +44,7 @@ class ClassList extends React.Component {
     return (
       <InfoList
         title='Classes'
-        toJSX={this.classToJSX}
+        toJSX={ClassList.classToJSX}
         comparator={ClassList.classComparator}
         orderings={ClassList.classOrderings}
         content={this.props.classes}

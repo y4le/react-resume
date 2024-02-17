@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer'
+import { Document, Page, Text, View, StyleSheet, Link } from '@react-pdf/renderer'
+
+import { EventList } from '../js/lists/EventList'
+import { SkillList } from '../js/lists/SkillList'
 
 // Create styles
 const styles = StyleSheet.create({
@@ -77,14 +80,19 @@ const styles = StyleSheet.create({
     paddingTop: 0,
     paddingRight: 0,
     paddingLeft: 0,
-    paddingBottom: 5,
+    paddingBottom: 1,
     margin: 0
   },
 
-  workNotes: {
-    fontSize: 9,
+  workSkillRow: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'row',
+    paddingBottom: 1
+  },
+
+  workBody: {
+    fontSize: 9,
+    paddingLeft: 3
   },
 
   workNote: {
@@ -111,24 +119,26 @@ const PdfResume = props => (
 
         <View style={styles.mainColumn}>
           <View style={styles.headerRow}>
-            <Text>{props.content.name}</Text>
-            <Text>{props.content.number}</Text>
-            <Text>{props.content.email}</Text>
+            <Text>{props.content.PROFILE.name}</Text>
+            <Text>{props.content.PROFILE.number}</Text>
+            <Text>{props.content.PROFILE.email}</Text>
           </View>
 
           <View style={styles.profile}>
-            {props.content.profile.map(function (para) { return (<Text style={styles.profileText}>{para}</Text>) })}
+            <Text style={styles.profileText}>
+              {props.content.PROFILE.profile}
+            </Text>
           </View>
         </View>
 
         <View style={styles.skillsSection}>
           {props.content.SKILLS
-            .sort(function (a, b) { return props.content.skillComparator(a, b, props.content.skillOrderings.indexOf('category')) })
+            .sort(function (a, b) { return SkillList.skillComparator(a, b, SkillList.skillOrderings.indexOf('category')) })
             .map(skill => {
               return (
                 <View style={styles.skillRow} key={skill.name}>
                   <Text> {skill.name} </Text>
-                  <Text> {props.content.skillText(skill.skill)} </Text>
+                  <Text> {SkillList.skillText(skill.skill)} </Text>
                 </View>
               )
             })}
@@ -137,7 +147,7 @@ const PdfResume = props => (
 
       <View style={styles.workSection}>
         {props.content.WORK
-          .sort(function (a, b) { return props.content.profileComparator(a, b, 1) })
+          .sort(function (a, b) { return EventList.eventComparator(a, b, 1) })
           .map(job => {
             if (job.skippable) { return null }
             return (
@@ -146,18 +156,20 @@ const PdfResume = props => (
                   <Text style={styles.workTitle}> {job.title} - {job.job_title} </Text>
                   <Text style={styles.workDate}> ({job.start_date} - {job.end_date}) </Text>
                 </View>
-                <View style={styles.workNotes}>
-                  {job.notes.map((note) => {
-                    const noteWithoutLinks = note.replace(/\[([^\]]+)]\(([^\)]+)\)/, '$1')
-                    return (<Text style={styles.workNote} key={note}> {noteWithoutLinks} </Text>)
-                  })}
+                <View style={styles.workBody}>
+                  <View style={styles.workSkillRow}>
+                    {job.skills.map((skill) => {
+                      return <Text style={styles.workSkill} key={skill}> {skill} </Text>
+                    })}
+                  </View>
+                  <Text style={styles.workNote}>{job.notes}</Text>
                 </View>
               </View>
             )
           })}
       </View>
 
-      <Text style={styles.footerRow}> see {props.content.link} for full resume </Text>
+      <Text style={styles.footerRow}> see <Link src={props.content.PROFILE.link}>{props.content.PROFILE.link}</Link> for full resume </Text>
 
     </Page>
   </Document>

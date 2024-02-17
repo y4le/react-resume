@@ -28,14 +28,12 @@ class SkillList extends React.Component {
     }
   }
 
-  skillText (skillValue) {
+  static skillText (skillValue) {
     if (skillValue <= 0.3) { return '+' } else if (skillValue <= 0.6) { return '++' } else { return '+++' }
   }
 
-  skillToJSX (skill) {
-    const skillText = (function (skillValue) {
-      if (skillValue <= 0.3) { return '+' } else if (skillValue <= 0.6) { return '++' } else { return '+++' }
-    }(skill.skill))
+  static skillToJSX (skill) {
+    const skillText = SkillList.skillText(skill.skill)
     return (
       <div key={skill.name} className='skill_row'>
         <div>{skill.name}</div><div>{skillText}</div>
@@ -47,7 +45,7 @@ class SkillList extends React.Component {
     return (
       <InfoList
         title='Skills'
-        toJSX={this.skillToJSX}
+        toJSX={SkillList.skillToJSX}
         comparator={SkillList.skillComparator}
         orderings={SkillList.skillOrderings}
         content={this.props.skills}
