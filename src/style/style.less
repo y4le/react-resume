@@ -124,6 +124,8 @@ body {
 
       .used_skills {
         display: flex;
+        flex-wrap: wrap;
+        row-gap: 5px;
       }
 
       .used_skill {
@@ -255,11 +257,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  padding-right: 5px;
 }
 
 @media (max-width: @min_page_width_for_full_layout) {
   #app {
-    width: 80%;
     margin: 0 auto;
     .flexbody {
       flex-wrap: wrap-reverse;
@@ -277,6 +279,8 @@ body {
     }
     .name {
       font-size: @super_large_font * .9;
+      white-space: normal;
+      text-align: center;
     }
   }
 }
@@ -296,8 +300,6 @@ body {
     font-size: 50%;
   }
   #app {
-    width: 90%;
-
     .flexheader {
       flex-wrap: nowrap;
       flex-direction: row-reverse;

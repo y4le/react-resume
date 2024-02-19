@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: 'column',
     backgroundColor: '#E4E4E4',
-    fontSize: 10,
+    fontSize: 11,
     padding: 50,
     height: '100%',
     position: 'relative'
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
 
   profile: {
-    paddingTop: 20,
+    paddingTop: 10,
     margin: 0
   },
 
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   mainColumn: {
     width: '80%',
     flexGrow: 1,
-    paddingRight: 20
+    paddingRight: 10
   },
 
   skillsSection: {
@@ -65,7 +65,9 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    flexGrow: 1
+    flexGrow: 1,
+    paddingTop: 5,
+    marginLeft: -3
   },
 
   workRow: {
@@ -87,7 +89,8 @@ const styles = StyleSheet.create({
   workSkillRow: {
     display: 'flex',
     flexDirection: 'row',
-    paddingBottom: 1
+    marginLeft: -2,
+    paddingBottom: 2
   },
 
   workBody: {
@@ -135,6 +138,9 @@ const PdfResume = props => (
           {props.content.SKILLS
             .sort(function (a, b) { return SkillList.skillComparator(a, b, SkillList.skillOrderings.indexOf('category')) })
             .map(skill => {
+              if (skill.skippable) {
+                return null
+              }
               return (
                 <View style={styles.skillRow} key={skill.name}>
                   <Text> {skill.name} </Text>

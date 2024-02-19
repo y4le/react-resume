@@ -30,7 +30,7 @@ const jsx = (
       <div className='mainbar'>
         <div className='profile'>
           <Header text='Profile' />
-          <p>{PROFILE.profile}</p>
+          {PROFILE.profile}
         </div>
         <EventList title='Work' events={content.WORK} />
         <EventList title='Education' events={content.EDUCATION} />
@@ -38,7 +38,7 @@ const jsx = (
       </div>
     </div>
     <div className='pdf_link'>
-      <a href={pdfFile} target='_blank' rel='noreferrer'>Pdf Version</a>
+      <a href={pdfFile} target='_blank' rel='noreferrer'>Pdf</a>
     </div>
   </div>
 )
